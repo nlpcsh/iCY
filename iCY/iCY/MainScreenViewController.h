@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuizListViewController.h"
 
 @interface MainScreenViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *welcome;
+@property (weak, nonatomic) IBOutlet UIButton *acceptChallenge;
+@property (weak, nonatomic) IBOutlet UIButton *challange;
+@property (weak, nonatomic) IBOutlet UIButton *doQuiz;
 
+@property (nonatomic, retain) QuizListViewController *quizListController;
+
+- (IBAction)goToQuiz:(id)sender;
+- (IBAction)goToResults:(id)sender;
+
+//- (IBAction)goToQuiz:(id)sender;
 
 @end
 

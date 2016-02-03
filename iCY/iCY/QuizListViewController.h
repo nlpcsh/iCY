@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface QuizListViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *quizLable;
 
 @end
