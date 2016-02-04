@@ -1,49 +1,49 @@
 //
-//  ResultsViewController.m
+//  QuizListViewController.m
 //  iCY
 //
 //  Created by My Name on 2/3/16.
 //  Copyright © 2016 My Name. All rights reserved.
 //
 
-#import "ResultsTableViewController.h"
+#import "QuizListTableViewController.h"
 
-@interface ResultsTableViewController ()
+@interface QuizListTableViewController ()
 
 @end
 
-@implementation ResultsTableViewController
+@implementation QuizListTableViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSLog(@"Results did load");
     
-    self.title = @"Completed Quizzes";
-    [self readResults];
+    [super viewDidLoad];
+    
+    NSLog(@"Quiz list did load");
+    
+    [self quizListUpdate];
     
 }
 
--(void) readResults {
-    self.results = [NSArray arrayWithObjects:@"First result", @"Second result", @"Third result", nil ];
+-(void) quizListUpdate {
+    self.quizList = [NSArray arrayWithObjects:@"First quiz", @"Second quiz", @"Third quiz", nil ];
 }
 
 -(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"resultsCell";
+    static NSString *cellIdentifier = @"quizNameCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = [self.results objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.quizList objectAtIndex:indexPath.row];
     //cell.imageView.image =
     
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *) tableView numberOfRowsInSection:(NSInteger)section {
-    return self.results.count;
+    return self.quizList.count;
 }
 
 - (void)didReceiveMemoryWarning {

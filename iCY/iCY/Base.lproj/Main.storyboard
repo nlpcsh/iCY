@@ -5,35 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Quiz List View Controller-->
-        <scene sceneID="FhC-TA-JLE">
-            <objects>
-                <viewController storyboardIdentifier="quizList" id="WHT-cc-0NB" customClass="QuizListViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oVm-5V-sfI"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tuz-Jp-vwU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QFe-TK-yqi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKu-Rh-ok6">
-                                <rect key="frame" x="56" y="58" width="119" height="52"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="quizLable" destination="jKu-Rh-ok6" id="IKO-kW-FDS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MGl-a0-luc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1483" y="12"/>
-        </scene>
         <!--Main Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -56,8 +27,8 @@
                                     <color key="titleColor" red="0.81133426047120416" green="0.43028841412002677" blue="0.00032838995379739377" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-JS-bYr">
-                                <rect key="frame" x="232" y="355" width="136" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-JS-bYr">
+                                <rect key="frame" x="243" y="355" width="115" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Challange!">
                                     <color key="titleColor" red="0.00040475297272257738" green="0.030549035174390338" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,8 +37,12 @@
                                     <action selector="goToResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xJ-Fj-yjR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ2-pg-eL3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ2-pg-eL3">
                                 <rect key="frame" x="239" y="457" width="123" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="20p-7H-R9D"/>
+                                    <constraint firstAttribute="width" constant="123" id="Lwz-Sz-mvg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Do Quiz">
                                     <color key="titleColor" red="0.0" green="0.04665440074688032" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,6 +65,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DT4-b7-DPI" firstAttribute="centerX" secondItem="w4V-JS-bYr" secondAttribute="centerX" id="CTA-KP-HBe"/>
+                            <constraint firstItem="wZ2-pg-eL3" firstAttribute="top" secondItem="w4V-JS-bYr" secondAttribute="bottom" constant="48" id="Q7u-9q-dqF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wZ2-pg-eL3" secondAttribute="bottom" constant="88" id="Ukf-R1-dMu"/>
                             <constraint firstItem="YoP-Jj-URP" firstAttribute="centerX" secondItem="w4V-JS-bYr" secondAttribute="centerX" id="dbf-r2-ozh"/>
                             <constraint firstItem="YoP-Jj-URP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="eAg-hm-YXv"/>
                             <constraint firstItem="YoP-Jj-URP" firstAttribute="centerX" secondItem="wZ2-pg-eL3" secondAttribute="centerX" id="pl4-bk-Hgc"/>
@@ -110,6 +87,34 @@
             </objects>
             <point key="canvasLocation" x="830" y="12"/>
         </scene>
+        <!--Quiz List Table View Controller-->
+        <scene sceneID="Skt-Mp-ElU">
+            <objects>
+                <tableViewController storyboardIdentifier="quizList" id="YrS-aP-WPw" customClass="QuizListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="dUe-u1-RTh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e2W-46-oLA">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e2W-46-oLA" id="EeV-7Z-TJX">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YrS-aP-WPw" id="cCp-A6-vbR"/>
+                            <outlet property="delegate" destination="YrS-aP-WPw" id="GY3-uH-nCv"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3o-13-d6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="12"/>
+        </scene>
         <!--Results Table View Controller-->
         <scene sceneID="dqX-Rk-Ju7">
             <objects>
@@ -129,7 +134,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETZ-Cc-NzI">
                                             <rect key="frame" x="63" y="0.0" width="80" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

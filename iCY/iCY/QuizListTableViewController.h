@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuizListViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *quizLable;
+@interface QuizListTableViewController : UITableViewController
+
+@property (strong, nonatomic) NSArray *quizList;
 
 @end

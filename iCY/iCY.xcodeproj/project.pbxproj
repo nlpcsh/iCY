@@ -13,7 +13,7 @@
 		F306465A1C6135E600E2A1F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30646581C6135E600E2A1F6 /* Main.storyboard */; };
 		F306465C1C6135E600E2A1F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F306465B1C6135E600E2A1F6 /* Assets.xcassets */; };
 		F306465F1C6135E600E2A1F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F306465D1C6135E600E2A1F6 /* LaunchScreen.storyboard */; };
-		F30646711C6254D900E2A1F6 /* QuizListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30646701C6254D900E2A1F6 /* QuizListViewController.m */; };
+		F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30646701C6254D900E2A1F6 /* QuizListTableViewController.m */; };
 		F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */; };
 		F30646781C6369E900E2A1F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30646771C6369E900E2A1F6 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -29,8 +29,8 @@
 		F306465B1C6135E600E2A1F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F306465E1C6135E600E2A1F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F30646601C6135E600E2A1F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F306466F1C6254D900E2A1F6 /* QuizListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizListViewController.h; sourceTree = "<group>"; };
-		F30646701C6254D900E2A1F6 /* QuizListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizListViewController.m; sourceTree = "<group>"; };
+		F306466F1C6254D900E2A1F6 /* QuizListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizListTableViewController.h; sourceTree = "<group>"; };
+		F30646701C6254D900E2A1F6 /* QuizListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizListTableViewController.m; sourceTree = "<group>"; };
 		F30646721C62965B00E2A1F6 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
 		F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 		F30646771C6369E900E2A1F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -93,8 +93,8 @@
 			children = (
 				F30646551C6135E600E2A1F6 /* MainScreenViewController.h */,
 				F30646561C6135E600E2A1F6 /* MainScreenViewController.m */,
-				F306466F1C6254D900E2A1F6 /* QuizListViewController.h */,
-				F30646701C6254D900E2A1F6 /* QuizListViewController.m */,
+				F306466F1C6254D900E2A1F6 /* QuizListTableViewController.h */,
+				F30646701C6254D900E2A1F6 /* QuizListTableViewController.m */,
 				F30646721C62965B00E2A1F6 /* ResultsTableViewController.h */,
 				F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */,
 			);
@@ -174,7 +174,7 @@
 				F30646571C6135E600E2A1F6 /* MainScreenViewController.m in Sources */,
 				F30646541C6135E600E2A1F6 /* AppDelegate.m in Sources */,
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
-				F30646711C6254D900E2A1F6 /* QuizListViewController.m in Sources */,
+				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,
 				F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 //
 
 #import "MainScreenViewController.h"
-#import "QuizListViewController.h"
+#import "QuizListTableViewController.h"
 #include "ResultsTableViewController.h"
 
 #import "AppDelegate.h"
@@ -17,8 +17,6 @@
 @end
 
 @implementation MainScreenViewController
-
-//@synthesize quizListController;
 
 static NSString *viewIdentifier = @"MainScreenView" ;
 
@@ -69,7 +67,7 @@ static NSString *viewIdentifier = @"MainScreenView" ;
 
 - (IBAction)goToQuiz:(id)sender {
     NSLog(@"goTo Quiz!");
-    QuizListViewController *quizList = [self.storyboard instantiateViewControllerWithIdentifier:@"quizList"];
+    QuizListTableViewController *quizList = [self.storyboard instantiateViewControllerWithIdentifier:@"quizList"];
     
     
     //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;

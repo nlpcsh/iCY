@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ResultsTableViewController : UIViewController
+@interface ResultsTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *results;
 

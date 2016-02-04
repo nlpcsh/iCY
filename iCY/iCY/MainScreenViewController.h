@@ -14,12 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *challange;
 @property (weak, nonatomic) IBOutlet UIButton *doQuiz;
 
-//@property (nonatomic, retain) QuizListViewController *quizListController;
-
 - (IBAction)goToQuiz:(id)sender;
 - (IBAction)goToResults:(id)sender;
-
-//- (IBAction)goToQuiz:(id)sender;
 
 @end
 
