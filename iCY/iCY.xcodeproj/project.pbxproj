@@ -16,6 +16,7 @@
 		F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30646701C6254D900E2A1F6 /* QuizListTableViewController.m */; };
 		F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */; };
 		F30646781C6369E900E2A1F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30646771C6369E900E2A1F6 /* CoreData.framework */; };
+		F306467B1C639B2500E2A1F6 /* ChallengesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F306467A1C639B2500E2A1F6 /* ChallengesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		F30646721C62965B00E2A1F6 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
 		F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
 		F30646771C6369E900E2A1F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F30646791C639B2500E2A1F6 /* ChallengesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengesTableViewController.h; sourceTree = "<group>"; };
+		F306467A1C639B2500E2A1F6 /* ChallengesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				F30646701C6254D900E2A1F6 /* QuizListTableViewController.m */,
 				F30646721C62965B00E2A1F6 /* ResultsTableViewController.h */,
 				F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */,
+				F30646791C639B2500E2A1F6 /* ChallengesTableViewController.h */,
+				F306467A1C639B2500E2A1F6 /* ChallengesTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F30646571C6135E600E2A1F6 /* MainScreenViewController.m in Sources */,
+				F306467B1C639B2500E2A1F6 /* ChallengesTableViewController.m in Sources */,
 				F30646541C6135E600E2A1F6 /* AppDelegate.m in Sources */,
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
 				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,

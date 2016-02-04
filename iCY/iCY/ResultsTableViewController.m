@@ -51,6 +51,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //NSLog(@" Selected row is %ld", indexPath.row);
+    
+}
+
 /*
 #pragma mark - Navigation
 

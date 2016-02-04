@@ -26,6 +26,9 @@
                                 <state key="normal" title="Accept the challange!">
                                     <color key="titleColor" red="0.81133426047120416" green="0.43028841412002677" blue="0.00032838995379739377" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToChallenges:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFA-39-FG4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-JS-bYr">
                                 <rect key="frame" x="243" y="355" width="115" height="54"/>
@@ -149,7 +152,35 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96y-mH-Wbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="726"/>
+            <point key="canvasLocation" x="1472" y="708"/>
+        </scene>
+        <!--Challenges Table View Controller-->
+        <scene sceneID="NSs-Du-3gb">
+            <objects>
+                <tableViewController storyboardIdentifier="challengesViewList" id="l56-Xs-oIH" customClass="ChallengesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vxu-r4-Zug">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vaO-JB-Bao">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vaO-JB-Bao" id="8T1-vM-dlC">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="l56-Xs-oIH" id="ZTR-gz-7SD"/>
+                            <outlet property="delegate" destination="l56-Xs-oIH" id="wNW-o7-Dsp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VEV-hL-EhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="1393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dTc-A7-ZqW">

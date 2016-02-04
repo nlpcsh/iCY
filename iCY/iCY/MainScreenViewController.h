@@ -16,6 +16,7 @@
 
 - (IBAction)goToQuiz:(id)sender;
 - (IBAction)goToResults:(id)sender;
+- (IBAction)goToChallenges:(id)sender;
 
 @end
 

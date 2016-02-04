@@ -8,7 +8,8 @@
 
 #import "MainScreenViewController.h"
 #import "QuizListTableViewController.h"
-#include "ResultsTableViewController.h"
+#import "ResultsTableViewController.h"
+#import "ChallengesTableViewController.h"
 
 #import "AppDelegate.h"
 
@@ -87,5 +88,12 @@ static NSString *viewIdentifier = @"MainScreenView" ;
     //appDelegate.window.rootViewController = quizList;
     
     [self.navigationController pushViewController:resultsList animated:YES];
+}
+
+- (IBAction)goToChallenges:(id)sender {
+    NSLog(@"goTo Challenges!");
+    ChallengesTableViewController *challengesViewList = [self.storyboard instantiateViewControllerWithIdentifier:@"challengesViewList"];
+    
+    [self.navigationController pushViewController:challengesViewList animated:YES];
 }
 @end
