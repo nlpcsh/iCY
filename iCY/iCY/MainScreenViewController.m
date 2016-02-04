@@ -18,7 +18,7 @@
 
 @implementation MainScreenViewController
 
-@synthesize quizListController;
+//@synthesize quizListController;
 
 static NSString *viewIdentifier = @"MainScreenView" ;
 

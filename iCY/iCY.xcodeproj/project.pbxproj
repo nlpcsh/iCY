@@ -15,6 +15,7 @@
 		F306465F1C6135E600E2A1F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F306465D1C6135E600E2A1F6 /* LaunchScreen.storyboard */; };
 		F30646711C6254D900E2A1F6 /* QuizListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30646701C6254D900E2A1F6 /* QuizListViewController.m */; };
 		F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */; };
+		F30646781C6369E900E2A1F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30646771C6369E900E2A1F6 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F30646701C6254D900E2A1F6 /* QuizListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizListViewController.m; sourceTree = "<group>"; };
 		F30646721C62965B00E2A1F6 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
 		F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
+		F30646771C6369E900E2A1F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30646781C6369E900E2A1F6 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +51,7 @@
 		F30646431C6135E600E2A1F6 = {
 			isa = PBXGroup;
 			children = (
+				F30646771C6369E900E2A1F6 /* CoreData.framework */,
 				F306464E1C6135E600E2A1F6 /* iCY */,
 				F306464D1C6135E600E2A1F6 /* Products */,
 			);
