@@ -17,6 +17,10 @@
 		F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */; };
 		F30646781C6369E900E2A1F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30646771C6369E900E2A1F6 /* CoreData.framework */; };
 		F306467B1C639B2500E2A1F6 /* ChallengesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F306467A1C639B2500E2A1F6 /* ChallengesTableViewController.m */; };
+		F306467E1C63A18000E2A1F6 /* QuizTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F306467D1C63A18000E2A1F6 /* QuizTableViewController.m */; };
+		F3E659ED1C64B540002AD58C /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659EC1C64B540002AD58C /* Quiz.m */; };
+		F3E659F01C64BA1F002AD58C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659EF1C64BA1F002AD58C /* Question.m */; };
+		F3E659F31C64BBCB002AD58C /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659F21C64BBCB002AD58C /* Answer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,15 @@
 		F30646771C6369E900E2A1F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F30646791C639B2500E2A1F6 /* ChallengesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengesTableViewController.h; sourceTree = "<group>"; };
 		F306467A1C639B2500E2A1F6 /* ChallengesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengesTableViewController.m; sourceTree = "<group>"; };
+		F306467C1C63A18000E2A1F6 /* QuizTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizTableViewController.h; sourceTree = "<group>"; };
+		F306467D1C63A18000E2A1F6 /* QuizTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizTableViewController.m; sourceTree = "<group>"; };
+		F30646801C647E9100E2A1F6 /* iCY-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iCY-Bridging-Header.h"; sourceTree = "<group>"; };
+		F3E659EB1C64B540002AD58C /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		F3E659EC1C64B540002AD58C /* Quiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
+		F3E659EE1C64BA1F002AD58C /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		F3E659EF1C64BA1F002AD58C /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		F3E659F11C64BBCB002AD58C /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		F3E659F21C64BBCB002AD58C /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +84,7 @@
 		F306464E1C6135E600E2A1F6 /* iCY */ = {
 			isa = PBXGroup;
 			children = (
+				F306467F1C647E0F00E2A1F6 /* Models */,
 				F306466E1C62497A00E2A1F6 /* ViewControllers */,
 				F30646521C6135E600E2A1F6 /* AppDelegate.h */,
 				F30646531C6135E600E2A1F6 /* AppDelegate.m */,
@@ -102,8 +116,24 @@
 				F30646731C62965B00E2A1F6 /* ResultsTableViewController.m */,
 				F30646791C639B2500E2A1F6 /* ChallengesTableViewController.h */,
 				F306467A1C639B2500E2A1F6 /* ChallengesTableViewController.m */,
+				F306467C1C63A18000E2A1F6 /* QuizTableViewController.h */,
+				F306467D1C63A18000E2A1F6 /* QuizTableViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F306467F1C647E0F00E2A1F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F30646801C647E9100E2A1F6 /* iCY-Bridging-Header.h */,
+				F3E659EB1C64B540002AD58C /* Quiz.h */,
+				F3E659EC1C64B540002AD58C /* Quiz.m */,
+				F3E659EE1C64BA1F002AD58C /* Question.h */,
+				F3E659EF1C64BA1F002AD58C /* Question.m */,
+				F3E659F11C64BBCB002AD58C /* Answer.h */,
+				F3E659F21C64BBCB002AD58C /* Answer.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,11 +207,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F30646571C6135E600E2A1F6 /* MainScreenViewController.m in Sources */,
+				F3E659F01C64BA1F002AD58C /* Question.m in Sources */,
 				F306467B1C639B2500E2A1F6 /* ChallengesTableViewController.m in Sources */,
+				F3E659ED1C64B540002AD58C /* Quiz.m in Sources */,
 				F30646541C6135E600E2A1F6 /* AppDelegate.m in Sources */,
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
 				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,
 				F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */,
+				F306467E1C63A18000E2A1F6 /* QuizTableViewController.m in Sources */,
+				F3E659F31C64BBCB002AD58C /* Answer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +261,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -270,6 +306,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -291,10 +329,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = iCY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.iCY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iCY/iCY-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -302,10 +344,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = iCY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.iCY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iCY/iCY-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -328,6 +373,7 @@
 				F30646651C6135E600E2A1F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

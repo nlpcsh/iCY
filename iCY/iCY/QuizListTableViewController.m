@@ -7,6 +7,10 @@
 //
 
 #import "QuizListTableViewController.h"
+#import "QuizTableViewController.h"
+
+//#import "iCY-Bridging-Header.h"
+//#import "iCY-Swift.h"
 
 @interface QuizListTableViewController ()
 
@@ -22,6 +26,9 @@
     
     [self quizListUpdate];
     
+    Quiz *myQuiz = [Quiz quizWithType:@"IT" name:@"My quiz" iD:(NSInteger *)1];
+    
+    NSLog(@" Quiz name: %@", myQuiz.name);
 }
 
 -(void) quizListUpdate {

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Quiz.h"
 
 @interface QuizListTableViewController : UITableViewController
 

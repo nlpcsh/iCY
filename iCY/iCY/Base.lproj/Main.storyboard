@@ -118,6 +118,34 @@
             </objects>
             <point key="canvasLocation" x="1472" y="12"/>
         </scene>
+        <!--Quiz Table View Controller-->
+        <scene sceneID="Slt-DJ-abh">
+            <objects>
+                <tableViewController storyboardIdentifier="quizView" id="VdR-St-mCP" customClass="QuizTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QBB-VR-3J1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KIf-0W-oNr">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KIf-0W-oNr" id="O4l-mk-LQ6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VdR-St-mCP" id="fZm-8X-neD"/>
+                            <outlet property="delegate" destination="VdR-St-mCP" id="a5h-VS-5Lr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4o-P4-gbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2150" y="12"/>
+        </scene>
         <!--Results Table View Controller-->
         <scene sceneID="dqX-Rk-Ju7">
             <objects>
