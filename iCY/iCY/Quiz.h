@@ -16,7 +16,7 @@
 
 @property  NSInteger *iD;
 
-@property (strong, nonatomic) NSArray *answers;
+@property (strong, nonatomic) NSArray *questions;
 
 
 -(instancetype)initWithType: (NSString*) type

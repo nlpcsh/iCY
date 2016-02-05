@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *body;
 @property  NSInteger *quizId;
 @property  NSInteger *iD;
+@property (strong, nonatomic) NSArray *answers;
 
 -(instancetype)initWithBody: (NSString*) body
                        quizId:(NSInteger*) quizId

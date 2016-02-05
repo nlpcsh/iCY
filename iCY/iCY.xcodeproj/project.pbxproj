@@ -21,6 +21,11 @@
 		F3E659ED1C64B540002AD58C /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659EC1C64B540002AD58C /* Quiz.m */; };
 		F3E659F01C64BA1F002AD58C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659EF1C64BA1F002AD58C /* Question.m */; };
 		F3E659F31C64BBCB002AD58C /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659F21C64BBCB002AD58C /* Answer.m */; };
+		F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659F51C6560AB002AD58C /* QuizDoneViewController.m */; };
+		F3E659FB1C65AF1D002AD58C /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659F91C65AF1D002AD58C /* QuestionTableViewCell.m */; };
+		F3E659FC1C65AF1D002AD58C /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E659FA1C65AF1D002AD58C /* QuestionTableViewCell.xib */; };
+		F3E65A001C65BC85002AD58C /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659FE1C65BC85002AD58C /* AnswerTableViewCell.m */; };
+		F3E65A011C65BC85002AD58C /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,14 @@
 		F3E659EF1C64BA1F002AD58C /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		F3E659F11C64BBCB002AD58C /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
 		F3E659F21C64BBCB002AD58C /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		F3E659F41C6560AB002AD58C /* QuizDoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizDoneViewController.h; sourceTree = "<group>"; };
+		F3E659F51C6560AB002AD58C /* QuizDoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizDoneViewController.m; sourceTree = "<group>"; };
+		F3E659F81C65AF1D002AD58C /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewCell.h; sourceTree = "<group>"; };
+		F3E659F91C65AF1D002AD58C /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
+		F3E659FA1C65AF1D002AD58C /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		F3E659FD1C65BC85002AD58C /* AnswerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerTableViewCell.h; sourceTree = "<group>"; };
+		F3E659FE1C65BC85002AD58C /* AnswerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerTableViewCell.m; sourceTree = "<group>"; };
+		F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +97,7 @@
 		F306464E1C6135E600E2A1F6 /* iCY */ = {
 			isa = PBXGroup;
 			children = (
+				F3E659F71C65AECC002AD58C /* Views */,
 				F306467F1C647E0F00E2A1F6 /* Models */,
 				F306466E1C62497A00E2A1F6 /* ViewControllers */,
 				F30646521C6135E600E2A1F6 /* AppDelegate.h */,
@@ -118,6 +132,8 @@
 				F306467A1C639B2500E2A1F6 /* ChallengesTableViewController.m */,
 				F306467C1C63A18000E2A1F6 /* QuizTableViewController.h */,
 				F306467D1C63A18000E2A1F6 /* QuizTableViewController.m */,
+				F3E659F41C6560AB002AD58C /* QuizDoneViewController.h */,
+				F3E659F51C6560AB002AD58C /* QuizDoneViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -134,6 +150,19 @@
 				F3E659F21C64BBCB002AD58C /* Answer.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		F3E659F71C65AECC002AD58C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3E659F81C65AF1D002AD58C /* QuestionTableViewCell.h */,
+				F3E659F91C65AF1D002AD58C /* QuestionTableViewCell.m */,
+				F3E659FA1C65AF1D002AD58C /* QuestionTableViewCell.xib */,
+				F3E659FD1C65BC85002AD58C /* AnswerTableViewCell.h */,
+				F3E659FE1C65BC85002AD58C /* AnswerTableViewCell.m */,
+				F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F306465F1C6135E600E2A1F6 /* LaunchScreen.storyboard in Resources */,
+				F3E659FC1C65AF1D002AD58C /* QuestionTableViewCell.xib in Resources */,
+				F3E65A011C65BC85002AD58C /* AnswerTableViewCell.xib in Resources */,
 				F306465C1C6135E600E2A1F6 /* Assets.xcassets in Resources */,
 				F306465A1C6135E600E2A1F6 /* Main.storyboard in Resources */,
 			);
@@ -207,12 +238,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F30646571C6135E600E2A1F6 /* MainScreenViewController.m in Sources */,
+				F3E659FB1C65AF1D002AD58C /* QuestionTableViewCell.m in Sources */,
 				F3E659F01C64BA1F002AD58C /* Question.m in Sources */,
 				F306467B1C639B2500E2A1F6 /* ChallengesTableViewController.m in Sources */,
 				F3E659ED1C64B540002AD58C /* Quiz.m in Sources */,
 				F30646541C6135E600E2A1F6 /* AppDelegate.m in Sources */,
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
+				F3E65A001C65BC85002AD58C /* AnswerTableViewCell.m in Sources */,
 				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,
+				F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */,
 				F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */,
 				F306467E1C63A18000E2A1F6 /* QuizTableViewController.m in Sources */,
 				F3E659F31C64BBCB002AD58C /* Answer.m in Sources */,

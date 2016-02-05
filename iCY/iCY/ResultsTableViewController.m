@@ -1,5 +1,5 @@
 //
-//  ResultsViewController.m
+//  ResultsTableViewController.m
 //  iCY
 //
 //  Created by My Name on 2/3/16.
