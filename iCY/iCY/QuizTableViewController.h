@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Quiz.h"
 #import "QuizDoneViewController.h"
+#import "AnswerTableViewCell.h"
 
 @interface QuizTableViewController : UITableViewController
 

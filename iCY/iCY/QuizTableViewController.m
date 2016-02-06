@@ -90,10 +90,13 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     
     static NSString *cellIdentifier;
     static NSString *cellText;
+    NSString *questionImgStr;
+    
     
     if ([self.questionAndAnswersList[indexPath.row] isKindOfClass:Question.class]) {
         cellIdentifier = @"QuestionTableViewCell";
-        //cellText = [_questionAndAnswersList[indexPath.row] body];
+
+        questionImgStr = @"questionImage";
     }
     else {
         cellIdentifier = @"AnswerTableViewCell";
@@ -107,9 +110,8 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    //cell.textLabel.text = [self.quiz.questions objectAtIndex:indexPath.row];
     cell.textLabel.text = cellText;
-    //cell.imageView.image =
+    cell.imageView.image = [UIImage imageNamed:questionImgStr];
     
     return cell;
 }

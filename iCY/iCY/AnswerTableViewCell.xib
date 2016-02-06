@@ -15,22 +15,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="409" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-uD-2tO">
-                        <rect key="frame" x="127" y="0.0" width="274" height="56"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-uD-2tO">
+                        <rect key="frame" x="135" y="0.0" width="274" height="56"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="274" id="cVF-mu-1He"/>
+                            <constraint firstAttribute="width" constant="274" id="3YD-8d-SPA"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="p1U-uD-2tO" secondAttribute="bottom" id="Lmf-CU-JnW"/>
-                    <constraint firstItem="p1U-uD-2tO" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="PPW-Sc-GaD"/>
-                    <constraint firstItem="p1U-uD-2tO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WPw-y4-PfP"/>
+                    <constraint firstItem="p1U-uD-2tO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="10f-ek-p0e"/>
+                    <constraint firstItem="p1U-uD-2tO" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="8" id="CCn-S4-3Qw"/>
+                    <constraint firstItem="p1U-uD-2tO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Dzr-1m-LPT"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="p1U-uD-2tO" secondAttribute="bottom" constant="-8" id="Fix-IJ-gXL"/>
+                    <constraint firstItem="p1U-uD-2tO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="127" id="HeK-NZ-fQM"/>
+                    <constraint firstItem="p1U-uD-2tO" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="8" id="K4Y-6x-363"/>
+                    <constraint firstAttribute="bottom" secondItem="p1U-uD-2tO" secondAttribute="bottom" id="Mne-Ig-qXv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="p1U-uD-2tO" secondAttribute="trailing" constant="-8" id="Qv3-OB-0he"/>
+                    <constraint firstItem="p1U-uD-2tO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="127" id="aep-PQ-z3G"/>
+                    <constraint firstItem="p1U-uD-2tO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="127" id="k96-Ti-UuJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="p1U-uD-2tO" secondAttribute="bottom" constant="-8" id="oIc-ua-cAa"/>
+                    <constraint firstItem="p1U-uD-2tO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sUx-aB-zku"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="answerBody" destination="p1U-uD-2tO" id="7Tj-HU-1x3"/>
+            </connections>
             <point key="canvasLocation" x="267.5" y="207.5"/>
         </tableViewCell>
     </objects>

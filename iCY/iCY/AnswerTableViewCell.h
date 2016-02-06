@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AnswerTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *answerBody;
 
 @end
