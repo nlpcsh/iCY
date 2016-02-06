@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "QuizListTableViewController.h"
+#import "ResultsTableViewController.h"
 
 @interface QuizDoneViewController : UIViewController
 
@@ -18,5 +21,6 @@
 
 - (IBAction)goChallengeSmone:(id)sender;
 - (IBAction)goToQuizAgain:(id)sender;
+
 
 @end

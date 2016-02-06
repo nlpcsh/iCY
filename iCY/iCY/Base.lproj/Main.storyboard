@@ -200,18 +200,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i38-hD-zJB">
-                                <rect key="frame" x="218" y="331" width="164" height="82"/>
-                                <state key="normal" title="Challenge Others"/>
-                                <connections>
-                                    <action selector="goChallengeSmone:" destination="UWl-CE-wkk" eventType="touchUpOutside" id="DEL-BS-3S3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3j-Qk-m2h">
                                 <rect key="frame" x="218" y="438" width="164" height="59"/>
                                 <state key="normal" title="Do Another Quiz"/>
                                 <connections>
-                                    <action selector="goToQuizAgain:" destination="UWl-CE-wkk" eventType="touchUpOutside" id="yXC-uh-7au"/>
+                                    <action selector="goToQuizAgain:" destination="UWl-CE-wkk" eventType="touchUpInside" id="eMN-9C-Gfq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i38-hD-zJB">
+                                <rect key="frame" x="218" y="331" width="164" height="82"/>
+                                <state key="normal" title="Challenge Others"/>
+                                <connections>
+                                    <action selector="goChallengeSmone:" destination="UWl-CE-wkk" eventType="touchUpInside" id="4ec-5h-c0y"/>
                                 </connections>
                             </button>
                         </subviews>
