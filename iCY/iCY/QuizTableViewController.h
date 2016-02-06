@@ -18,5 +18,8 @@
 @property (strong, nonatomic) NSTimer *stopWatch;
 @property (strong, nonatomic) UILabel *stopwatchView;
 @property double ticks;
+@property (strong, nonatomic) NSString *timeStr;
+@property NSInteger *timeSeconds;
+@property NSInteger *score;
 
 @end

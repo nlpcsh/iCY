@@ -40,10 +40,6 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)viewWillDisappear:(BOOL)animated {
-    [self.stopWatch invalidate];
-    self.stopWatch = nil;
-}
 
 -(IBAction)quizDone {
     
@@ -52,9 +48,17 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
         
     NSString *storyBoardId = @"quizDoneScene";
     
-    QuizDoneViewController *quizDoneVC = [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    QuizDoneViewController *quizDoneVC = [self.storyboard instantiateViewControllerWithIdentifier: storyBoardId];
     
-    [self.navigationController pushViewController:quizDoneVC animated:YES];
+    quizDoneVC.timeStr = self.timeStr;
+    quizDoneVC.timeSeconds = self.timeSeconds;
+    
+    self.score = (int)11;
+    
+    quizDoneVC.score = self.score;
+    
+    
+    [self.navigationController pushViewController: quizDoneVC animated: YES];
 }
 
 -(void) setStopwatch {
@@ -69,12 +73,13 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     self.stopwatchView = (UILabel *)self.navigationItem.titleView;
     
     if (!self.stopwatchView) {
-        self.stopwatchView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 32)];
+        self.stopwatchView = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, 100, 32)];
         self.stopwatchView.backgroundColor = [UIColor clearColor];
-        self.stopwatchView.font = [UIFont boldSystemFontOfSize:20.0];
-        self.stopwatchView.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        self.stopwatchView.font = [UIFont boldSystemFontOfSize: 20.0];
+        self.stopwatchView.shadowColor = [UIColor colorWithWhite: 0.0
+                                                           alpha: 0.5];
         self.stopwatchView.textColor = [UIColor blueColor];
-        //self.stopwatchView.backgroundColor=[UIColor blackColor];
+        //self.stopwatchView.backgroundColor = [UIColor blackColor];
         //self.stopwatchView.text = @"00:00:00";
         self.stopwatchView.textAlignment = UITextAlignmentCenter;
         [self.navigationItem setTitleView: self.stopwatchView];
@@ -86,11 +91,12 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
 -(void)timerTick:(NSTimer *)timer
 {
     self.ticks += 1.0;
+    self.timeSeconds = (NSInteger )self.ticks;
     double seconds = fmod(self.ticks, 60.0);
     double minutes = fmod(trunc(self.ticks / 60.0), 60.0);
     double hours = trunc(self.ticks / 3600.0);
-    self.stopwatchView.text = [NSString stringWithFormat:@"%02.0f:%02.0f:%02.0f", hours, minutes, seconds];
-    
+    self.timeStr = [NSString stringWithFormat:@"%02.0f:%02.0f:%02.0f", hours, minutes, seconds];
+    self.stopwatchView.text = self.timeStr;
     //NSLog([NSString stringWithFormat:@"%02.0f:%02.0f:%02.0f", hours, minutes, seconds] );
 }
 
@@ -129,29 +135,27 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     return rowsCount;
 }
 
-
 -(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    static NSString *cellIdentifier;
-    static NSString *cellText;
+    NSString *cellIdentifier;
+    NSString *cellText;
     NSString *questionImgStr;
-    
     
     if ([self.questionAndAnswersList[indexPath.row] isKindOfClass:Question.class]) {
         cellIdentifier = @"QuestionTableViewCell";
-
         questionImgStr = @"questionImage";
     }
     else {
         cellIdentifier = @"AnswerTableViewCell";
-        
     }
+    
     cellText = [self.questionAndAnswersList[indexPath.row] body];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
+                                      reuseIdentifier: cellIdentifier];
     }
     
     cell.textLabel.text = cellText;
@@ -160,6 +164,10 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     return cell;
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.stopWatch invalidate];
+    self.stopWatch = nil;
+}
 
 /*
 // Override to support conditional editing of the table view.

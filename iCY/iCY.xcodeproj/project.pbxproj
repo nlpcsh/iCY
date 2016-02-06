@@ -26,6 +26,7 @@
 		F3E659FC1C65AF1D002AD58C /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E659FA1C65AF1D002AD58C /* QuestionTableViewCell.xib */; };
 		F3E65A001C65BC85002AD58C /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659FE1C65BC85002AD58C /* AnswerTableViewCell.m */; };
 		F3E65A011C65BC85002AD58C /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */; };
+		F3E65A051C66B066002AD58C /* HttpData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A041C66B066002AD58C /* HttpData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,8 @@
 		F3E659FD1C65BC85002AD58C /* AnswerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerTableViewCell.h; sourceTree = "<group>"; };
 		F3E659FE1C65BC85002AD58C /* AnswerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerTableViewCell.m; sourceTree = "<group>"; };
 		F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
+		F3E65A031C66B066002AD58C /* HttpData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpData.h; sourceTree = "<group>"; };
+		F3E65A041C66B066002AD58C /* HttpData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 		F306464E1C6135E600E2A1F6 /* iCY */ = {
 			isa = PBXGroup;
 			children = (
+				F3E65A021C66B039002AD58C /* Data */,
 				F3E659F71C65AECC002AD58C /* Views */,
 				F306467F1C647E0F00E2A1F6 /* Models */,
 				F306466E1C62497A00E2A1F6 /* ViewControllers */,
@@ -163,6 +167,15 @@
 				F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		F3E65A021C66B039002AD58C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F3E65A031C66B066002AD58C /* HttpData.h */,
+				F3E65A041C66B066002AD58C /* HttpData.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +259,7 @@
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
 				F3E65A001C65BC85002AD58C /* AnswerTableViewCell.m in Sources */,
 				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,
+				F3E65A051C66B066002AD58C /* HttpData.m in Sources */,
 				F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */,
 				F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */,
 				F306467E1C63A18000E2A1F6 /* QuizTableViewController.m in Sources */,

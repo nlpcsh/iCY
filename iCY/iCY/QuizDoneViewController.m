@@ -16,36 +16,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Quiz Rezults";
+    self.title = @"Rezults";
     
-    NSLog(@"Quiz DONE sceene!");
-    // Do view setup here.
+    //NSLog(@"Quiz DONE sceene!");
+    
+    // hide the navbar
+    [self.navigationController setNavigationBarHidden: YES
+                                             animated: YES];
+    
+    self.timeLable.text = self.timeStr;
+    self.scoreLable.text = [NSString stringWithFormat:@"%i", (int)self.score];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    // show the navbar
+    [self.navigationController setNavigationBarHidden: NO
+                                             animated: YES];
 }
 
 - (IBAction)goChallengeSmone:(id)sender {
     NSLog(@"go to Challenge Again!");
     
-   ResultsTableViewController *resultsList = [self.storyboard instantiateViewControllerWithIdentifier:@"resultsList"];
+   ResultsTableViewController *resultsList = [self.storyboard instantiateViewControllerWithIdentifier: @"resultsList"];
     
     //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
     //appDelegate.window.rootViewController = quizList;
     
-    [self.navigationController pushViewController:resultsList animated:YES];
+    [self.navigationController pushViewController: resultsList
+                                         animated: YES];
 }
 
 - (IBAction)goToQuizAgain:(id)sender {
     NSLog(@"go to Quiz Again!");
+    
     //AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     //[delegate.data addPhone:phone];
     
-    QuizListTableViewController *quizList = [self.storyboard instantiateViewControllerWithIdentifier:@"quizList"];
+    QuizListTableViewController *quizList = [self.storyboard instantiateViewControllerWithIdentifier: @"quizList"];
     
     //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
     //appDelegate.window.rootViewController = quizList;
     
-    [self.navigationController pushViewController:quizList animated:YES];
+    [self.navigationController pushViewController: quizList
+                                         animated: YES];
 }
 
 @end
