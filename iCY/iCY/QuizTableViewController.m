@@ -16,21 +16,21 @@
 
 static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
 
-
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
+    [self setStopwatch];
+    
     // reset array of question and answers
-    //
     self.questionAndAnswersList = [[NSMutableArray alloc] init];
     [self.questionAndAnswersList removeAllObjects];
     
+    // add Done button
     UIBarButtonItem *doneBarButton =
-    [[UIBarButtonItem alloc]
-     initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-     target:self
-     action:@selector(quizDone)];
-    
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemDone
+                                                  target: self
+                                                  action: @selector(quizDone)];
     self.navigationItem.rightBarButtonItem = doneBarButton;
     
     // Uncomment the following line to preserve selection between presentations.
@@ -40,15 +40,59 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+    [self.stopWatch invalidate];
+    self.stopWatch = nil;
+}
+
 -(IBAction)quizDone {
+    
+    [self.stopWatch invalidate];
+    self.stopWatch = nil;
+        
     NSString *storyBoardId = @"quizDoneScene";
     
-    QuizDoneViewController *quizDoneVC =
-    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    QuizDoneViewController *quizDoneVC = [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     
     [self.navigationController pushViewController:quizDoneVC animated:YES];
 }
 
+-(void) setStopwatch {
+    self.stopWatch = [NSTimer scheduledTimerWithTimeInterval: 1.0
+                                                      target: self
+                                                    selector: @selector(timerTick:)
+                                                    userInfo: nil
+                                                     repeats: YES];
+    
+    [[NSRunLoop mainRunLoop] addTimer: self.stopWatch forMode:NSRunLoopCommonModes];
+    
+    self.stopwatchView = (UILabel *)self.navigationItem.titleView;
+    
+    if (!self.stopwatchView) {
+        self.stopwatchView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 32)];
+        self.stopwatchView.backgroundColor = [UIColor clearColor];
+        self.stopwatchView.font = [UIFont boldSystemFontOfSize:20.0];
+        self.stopwatchView.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        self.stopwatchView.textColor = [UIColor blueColor];
+        //self.stopwatchView.backgroundColor=[UIColor blackColor];
+        //self.stopwatchView.text = @"00:00:00";
+        self.stopwatchView.textAlignment = UITextAlignmentCenter;
+        [self.navigationItem setTitleView: self.stopwatchView];
+    }
+    
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
+}
+
+-(void)timerTick:(NSTimer *)timer
+{
+    self.ticks += 1.0;
+    double seconds = fmod(self.ticks, 60.0);
+    double minutes = fmod(trunc(self.ticks / 60.0), 60.0);
+    double hours = trunc(self.ticks / 3600.0);
+    self.stopwatchView.text = [NSString stringWithFormat:@"%02.0f:%02.0f:%02.0f", hours, minutes, seconds];
+    
+    //NSLog([NSString stringWithFormat:@"%02.0f:%02.0f:%02.0f", hours, minutes, seconds] );
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -62,7 +106,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
 //    return 0;
 //}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     int rowsCount = 0;
     

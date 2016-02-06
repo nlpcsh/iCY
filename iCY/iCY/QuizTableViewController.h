@@ -15,5 +15,8 @@
 
 @property (strong, nonatomic) Quiz *quiz;
 @property (strong, nonatomic) NSMutableArray *questionAndAnswersList;
+@property (strong, nonatomic) NSTimer *stopWatch;
+@property (strong, nonatomic) UILabel *stopwatchView;
+@property double ticks;
 
 @end
