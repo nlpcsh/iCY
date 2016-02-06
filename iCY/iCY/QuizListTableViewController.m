@@ -34,7 +34,20 @@
     
     NSLog(@" Quiz name: %@", myQuiz.name);
     
-    NSArray *questionsToQuiz = [NSArray arrayWithObjects:@"Question 1", @"Question 2", nil];
+    
+    Answer *a1_1 = [ Answer answerWithBody:@"Is ok" questionId:(NSInteger *)101 iD:(NSInteger *)201 isTrue:(BOOL)YES];
+    Answer *a1_2 = [ Answer answerWithBody:@"Not ok" questionId:(NSInteger *)101 iD:(NSInteger *)202 isTrue:(BOOL)NO];
+    Question *q1 = [Question questionWithBody:@"How are you?" quizId:(NSInteger *)1 iD:(NSInteger *)101];
+    
+    q1.answers = [NSArray arrayWithObjects:a1_1, a1_2, nil];
+    
+    Answer *a2_1 = [ Answer answerWithBody:@"23" questionId:(NSInteger *)101 iD:(NSInteger *)203 isTrue:(BOOL)NO];
+    Answer *a2_2 = [ Answer answerWithBody:@"12" questionId:(NSInteger *)101 iD:(NSInteger *)204 isTrue:(BOOL)YES];
+    Question *q2 = [Question questionWithBody:@"How much is 1 + 11?" quizId:(NSInteger *)1 iD:(NSInteger *)102];
+    
+    q2.answers = [NSArray arrayWithObjects:a2_1, a2_2, nil];
+    
+    NSArray *questionsToQuiz = [NSArray arrayWithObjects: q1, q2, nil];
     
     myQuiz.questions = questionsToQuiz;
     
@@ -43,7 +56,7 @@
     
     NSLog(@" Quiz name: %@", myQuiz2.name);
     
-    NSArray *questionsToQuiz2 = [NSArray arrayWithObjects:@"Question 3", @"Question 4", nil];
+    NSArray *questionsToQuiz2 = [NSArray arrayWithObjects: q2, q1, nil];
     
     myQuiz2.questions = questionsToQuiz2;
     
@@ -65,6 +78,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *) tableView numberOfRowsInSection:(NSInteger)section {
+    
     return self.quizList.count;
 }
 

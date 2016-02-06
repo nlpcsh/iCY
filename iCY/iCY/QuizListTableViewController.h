@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Quiz.h"
+#import "Question.h"
+#import "Answer.h"
 
 @interface QuizListTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *quizList;
+
 //@property (strong, nonatomic) Quiz *myQuiz;
 
 @end
