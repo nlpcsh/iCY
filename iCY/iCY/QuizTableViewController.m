@@ -17,12 +17,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    UIBarButtonItem *doneBarButton =
+    [[UIBarButtonItem alloc]
+     initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+     target:self
+     action:@selector(quizDone)];
+    
+    self.navigationItem.rightBarButtonItem = doneBarButton;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+-(IBAction)quizDone {
+    NSString *storyBoardId = @"quizDoneScene";
+    
+    QuizDoneViewController *quizDoneVC =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    
+    [self.navigationController pushViewController:quizDoneVC animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -37,7 +56,22 @@
 //}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.quizQuiestions.count;
+    return self.quiz.questions.count;
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"challengeCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.textLabel.text = [self.quiz.questions objectAtIndex:indexPath.row];
+    //cell.imageView.image =
+    
+    return cell;
 }
 
 

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Quiz.h"
+#import "QuizDoneViewController.h"
 
 @interface QuizTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *quizQuiestions;
+@property (strong, nonatomic) Quiz *quiz;
 
 @end

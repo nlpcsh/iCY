@@ -21,6 +21,7 @@
 		F3E659ED1C64B540002AD58C /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659EC1C64B540002AD58C /* Quiz.m */; };
 		F3E659F01C64BA1F002AD58C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659EF1C64BA1F002AD58C /* Question.m */; };
 		F3E659F31C64BBCB002AD58C /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659F21C64BBCB002AD58C /* Answer.m */; };
+		F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659F51C6560AB002AD58C /* QuizDoneViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		F3E659EF1C64BA1F002AD58C /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		F3E659F11C64BBCB002AD58C /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
 		F3E659F21C64BBCB002AD58C /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		F3E659F41C6560AB002AD58C /* QuizDoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizDoneViewController.h; sourceTree = "<group>"; };
+		F3E659F51C6560AB002AD58C /* QuizDoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizDoneViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				F306467A1C639B2500E2A1F6 /* ChallengesTableViewController.m */,
 				F306467C1C63A18000E2A1F6 /* QuizTableViewController.h */,
 				F306467D1C63A18000E2A1F6 /* QuizTableViewController.m */,
+				F3E659F41C6560AB002AD58C /* QuizDoneViewController.h */,
+				F3E659F51C6560AB002AD58C /* QuizDoneViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				F30646541C6135E600E2A1F6 /* AppDelegate.m in Sources */,
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
 				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,
+				F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */,
 				F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */,
 				F306467E1C63A18000E2A1F6 /* QuizTableViewController.m in Sources */,
 				F3E659F31C64BBCB002AD58C /* Answer.m in Sources */,

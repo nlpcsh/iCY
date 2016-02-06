@@ -12,5 +12,6 @@
 @interface QuizListTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *quizList;
+//@property (strong, nonatomic) Quiz *myQuiz;
 
 @end

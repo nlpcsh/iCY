@@ -26,13 +26,28 @@
     
     [self quizListUpdate];
     
-    Quiz *myQuiz = [Quiz quizWithType:@"IT" name:@"My quiz" iD:(NSInteger *)1];
-    
-    NSLog(@" Quiz name: %@", myQuiz.name);
 }
 
 -(void) quizListUpdate {
-    self.quizList = [NSArray arrayWithObjects:@"First quiz", @"Second quiz", @"Third quiz", nil ];
+    
+    Quiz *myQuiz = [Quiz quizWithType:@"IT" name:@"Programming" iD:(NSInteger *)1];
+    
+    NSLog(@" Quiz name: %@", myQuiz.name);
+    
+    NSArray *questionsToQuiz = [NSArray arrayWithObjects:@"Question 1", @"Question 2", nil];
+    
+    myQuiz.questions = questionsToQuiz;
+    
+    
+    Quiz *myQuiz2 = [Quiz quizWithType:@"Biology" name:@"Reptiles" iD:(NSInteger *)2];
+    
+    NSLog(@" Quiz name: %@", myQuiz2.name);
+    
+    NSArray *questionsToQuiz2 = [NSArray arrayWithObjects:@"Question 3", @"Question 4", nil];
+    
+    myQuiz2.questions = questionsToQuiz2;
+    
+    self.quizList = [NSArray arrayWithObjects: myQuiz, myQuiz2, nil ];
 }
 
 -(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -43,7 +58,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = [self.quizList objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[self.quizList objectAtIndex:indexPath.row] name];
     //cell.imageView.image =
     
     return cell;
@@ -61,6 +76,16 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@" Selected row is %ld", indexPath.row);
     
+    Quiz *quiz = [self.quizList objectAtIndex:indexPath.row];
+    NSString *storyBoardId = @"quizView";
+    
+    QuizTableViewController *quizVC =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    quizVC.quiz = quiz;
+    
+    //         AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    //    appDelegate.window.rootViewController = detailsVC;
+    [self.navigationController pushViewController:quizVC animated:YES];
 }
 
 /*
