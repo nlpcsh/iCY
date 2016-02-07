@@ -16,8 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *challange;
 @property (weak, nonatomic) IBOutlet UIButton *doQuiz;
 
-@property (strong, nonatomic) HttpData *httpData;
-@property (strong, nonatomic) NSArray* challenges;
+//@property (strong, nonatomic) HttpData *httpData;
+//@property (strong, nonatomic) NSArray* challenges;
 
 - (IBAction)goToQuiz:(id)sender;
 - (IBAction)goToResults:(id)sender;

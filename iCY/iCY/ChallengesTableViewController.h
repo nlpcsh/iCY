@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AddressBook/AddressBook.h>
-#import "Contact.h"
+//#import <AddressBook/AddressBook.h>
+//#import "Contact.h"
 #import "Challenge.h"
-
+#import "AppDelegate.h"
 
 @interface ChallengesTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSMutableArray *addressBookList;
+//@property (strong, nonatomic) NSMutableArray *addressBookList;
 @property (strong, nonatomic) NSArray *challenges;
 
 //@property (strong, nonatomic) NSMutableDictionary *challengerNames;

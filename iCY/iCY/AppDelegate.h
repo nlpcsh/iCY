@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBook/AddressBook.h>
 #import "HttpData.h"
-#import "Challenge.h"
-
+//#import "Challenge.h"
+#import "LocalData.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) LocalData *data;
+@property (strong, nonatomic) HttpData *httpData;
 
 @end
 

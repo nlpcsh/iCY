@@ -11,19 +11,17 @@
 
 @interface Quiz : NSObject
 
-@property (strong, nonatomic) NSString *type;
-@property (strong, nonatomic) NSString *name;
-
 @property  NSInteger *iD;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *type;
 
 @property (strong, nonatomic) NSArray *questions;
 
+-(instancetype)initWithType: (NSString *) type
+                       name: (NSString *) name
+                         iD: (NSInteger *) iD;
 
--(instancetype)initWithType: (NSString*) type
-                        name:(NSString*) name
-                     iD: (NSInteger*) iD;
-
-+(Quiz*) quizWithType: (NSString*) type
-                 name:(NSString*) name
-                   iD: (NSInteger*) iD;
++(Quiz *) quizWithType: (NSString *) type
+                  name: (NSString *) name
+                    iD: (NSInteger *) iD;
 @end

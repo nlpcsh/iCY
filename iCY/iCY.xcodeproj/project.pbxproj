@@ -29,6 +29,7 @@
 		F3E65A051C66B066002AD58C /* HttpData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A041C66B066002AD58C /* HttpData.m */; };
 		F3E65A081C66BE0A002AD58C /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A071C66BE0A002AD58C /* Challenge.m */; };
 		F3E65A0B1C66F91C002AD58C /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A0A1C66F91C002AD58C /* Contact.m */; };
+		F3E65A0E1C67DAAC002AD58C /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A0D1C67DAAC002AD58C /* LocalData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,8 @@
 		F3E65A071C66BE0A002AD58C /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
 		F3E65A091C66F91C002AD58C /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		F3E65A0A1C66F91C002AD58C /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		F3E65A0C1C67DAAB002AD58C /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
+		F3E65A0D1C67DAAC002AD58C /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 				F3E65A041C66B066002AD58C /* HttpData.m */,
 				F3E65A091C66F91C002AD58C /* Contact.h */,
 				F3E65A0A1C66F91C002AD58C /* Contact.m */,
+				F3E65A0C1C67DAAB002AD58C /* LocalData.h */,
+				F3E65A0D1C67DAAC002AD58C /* LocalData.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				F3E65A0B1C66F91C002AD58C /* Contact.m in Sources */,
 				F30646571C6135E600E2A1F6 /* MainScreenViewController.m in Sources */,
 				F3E659FB1C65AF1D002AD58C /* QuestionTableViewCell.m in Sources */,
+				F3E65A0E1C67DAAC002AD58C /* LocalData.m in Sources */,
 				F3E659F01C64BA1F002AD58C /* Question.m in Sources */,
 				F306467B1C639B2500E2A1F6 /* ChallengesTableViewController.m in Sources */,
 				F3E659ED1C64B540002AD58C /* Quiz.m in Sources */,
