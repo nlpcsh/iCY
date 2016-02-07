@@ -68,7 +68,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
+                                      reuseIdentifier: cellIdentifier];
     }
     
     cell.textLabel.text = [[self.quizList objectAtIndex:indexPath.row] name];
@@ -99,7 +100,8 @@
     
     //         AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     //    appDelegate.window.rootViewController = detailsVC;
-    [self.navigationController pushViewController:quizVC animated:YES];
+    [self.navigationController pushViewController: quizVC
+                                         animated: YES];
 }
 
 /*

@@ -22,6 +22,7 @@
         self.senderId = senderId;
         self.senderScore = senderScore;
         self.senderTime = senderTime;
+        self.senderName = nil;
     }
     return self;
 }

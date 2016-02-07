@@ -56,10 +56,11 @@ static NSString *viewIdentifier = @"MainScreenView" ;
           }
           self.challenges = challenges;
           
+          //// update data in the element when done
           //dispatch_async(dispatch_get_main_queue(), ^{
           //    [self.tableView reloadData];
           //});
-          NSLog(@"%@", self.challenges);
+          //NSLog(@"%@", [self.challenges[0] challengeeId]);
       }];
 }
 
@@ -93,6 +94,8 @@ static NSString *viewIdentifier = @"MainScreenView" ;
 - (IBAction)goToChallenges:(id)sender {
     NSLog(@"goTo Challenges!");
     ChallengesTableViewController *challengesViewList = [self.storyboard instantiateViewControllerWithIdentifier: @"challengesViewList"];
+    
+    challengesViewList.challenges = self.challenges;
     
     [self.navigationController pushViewController: challengesViewList animated: YES];
 }

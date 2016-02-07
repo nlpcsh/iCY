@@ -16,6 +16,8 @@
 
 @property (strong, nonatomic) NSString *senderId;
 
+@property (strong, nonatomic) NSString *senderName;
+
 @property (strong, nonatomic) NSString *senderScore;
 
 @property  (strong, nonatomic) NSString *senderTime;

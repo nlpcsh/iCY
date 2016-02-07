@@ -28,6 +28,7 @@
 		F3E65A011C65BC85002AD58C /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */; };
 		F3E65A051C66B066002AD58C /* HttpData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A041C66B066002AD58C /* HttpData.m */; };
 		F3E65A081C66BE0A002AD58C /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A071C66BE0A002AD58C /* Challenge.m */; };
+		F3E65A0B1C66F91C002AD58C /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A0A1C66F91C002AD58C /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,8 @@
 		F3E65A041C66B066002AD58C /* HttpData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpData.m; sourceTree = "<group>"; };
 		F3E65A061C66BE0A002AD58C /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
 		F3E65A071C66BE0A002AD58C /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
+		F3E65A091C66F91C002AD58C /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		F3E65A0A1C66F91C002AD58C /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 			children = (
 				F3E65A031C66B066002AD58C /* HttpData.h */,
 				F3E65A041C66B066002AD58C /* HttpData.m */,
+				F3E65A091C66F91C002AD58C /* Contact.h */,
+				F3E65A0A1C66F91C002AD58C /* Contact.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E65A0B1C66F91C002AD58C /* Contact.m in Sources */,
 				F30646571C6135E600E2A1F6 /* MainScreenViewController.m in Sources */,
 				F3E659FB1C65AF1D002AD58C /* QuestionTableViewCell.m in Sources */,
 				F3E659F01C64BA1F002AD58C /* Question.m in Sources */,
