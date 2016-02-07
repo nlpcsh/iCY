@@ -27,6 +27,7 @@
 		F3E65A001C65BC85002AD58C /* AnswerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E659FE1C65BC85002AD58C /* AnswerTableViewCell.m */; };
 		F3E65A011C65BC85002AD58C /* AnswerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */; };
 		F3E65A051C66B066002AD58C /* HttpData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A041C66B066002AD58C /* HttpData.m */; };
+		F3E65A081C66BE0A002AD58C /* Challage.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A071C66BE0A002AD58C /* Challage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		F3E659FF1C65BC85002AD58C /* AnswerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerTableViewCell.xib; sourceTree = "<group>"; };
 		F3E65A031C66B066002AD58C /* HttpData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpData.h; sourceTree = "<group>"; };
 		F3E65A041C66B066002AD58C /* HttpData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpData.m; sourceTree = "<group>"; };
+		F3E65A061C66BE0A002AD58C /* Challage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challage.h; sourceTree = "<group>"; };
+		F3E65A071C66BE0A002AD58C /* Challage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				F3E659EF1C64BA1F002AD58C /* Question.m */,
 				F3E659F11C64BBCB002AD58C /* Answer.h */,
 				F3E659F21C64BBCB002AD58C /* Answer.m */,
+				F3E65A061C66BE0A002AD58C /* Challage.h */,
+				F3E65A071C66BE0A002AD58C /* Challage.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 				F30646541C6135E600E2A1F6 /* AppDelegate.m in Sources */,
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
 				F3E65A001C65BC85002AD58C /* AnswerTableViewCell.m in Sources */,
+				F3E65A081C66BE0A002AD58C /* Challage.m in Sources */,
 				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,
 				F3E65A051C66B066002AD58C /* HttpData.m in Sources */,
 				F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */,
