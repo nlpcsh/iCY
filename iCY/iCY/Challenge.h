@@ -1,5 +1,5 @@
 //
-//  Challage.h
+//  Challenge.h
 //  iCY
 //
 //  Created by My Name on 2/6/16.
@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Challage : NSObject
+@interface Challenge : NSObject
 
 @property (strong, nonatomic) NSString *challengeeId;
 
 @property (strong, nonatomic) NSString *questId;
 
-@property (strong, nonatomic) NSString *sender;
+@property (strong, nonatomic) NSString *senderId;
 
 @property (strong, nonatomic) NSString *senderScore;
 
@@ -23,14 +23,20 @@
 
 -(instancetype)initWithId: (NSString *) challengeeId
                   questId: (NSString *) questId
-                   sender: (NSString *) sender
+                 senderId: (NSString *) senderId
               senderScore: (NSString *) senderScore
                senderTime: (NSString *) senderTime;
 
-+(Challage *) challengeWithId: (NSString*) challengeeId
++(Challenge *) challengeWithId: (NSString*) challengeeId
                       questId: (NSString *) questId
-                       sender: (NSString *) sender
+                     senderId: (NSString *) senderId
                   senderScore: (NSString *) senderScore
                    senderTime: (NSString *) senderTime;
+
+-initWithDict: (NSDictionary*) dict;
+
++(Challenge *) challengeWithDict: (NSDictionary *) dict;
+
+-dict;
 
 @end

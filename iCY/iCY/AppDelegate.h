@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HttpData.h"
+#import "Challenge.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

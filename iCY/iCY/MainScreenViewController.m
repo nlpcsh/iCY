@@ -13,15 +13,17 @@
 
 #import "AppDelegate.h"
 
+
 @interface MainScreenViewController ()
 
 @end
 
 @implementation MainScreenViewController
+{
+    NSString *_url;
+}
 
 static NSString *viewIdentifier = @"MainScreenView" ;
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,50 +31,50 @@ static NSString *viewIdentifier = @"MainScreenView" ;
     self.title = @"Main";
     
     NSLog(@"Main Did Load!");
-    // Do any additional setup after loading the view, typically from a nib.
     
-    //NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:viewIdentifier owner:self options:nil];
-    //UIView *subview = (UIView *)[nibs objectAtIndex:0 ];
+    _url = @"http://localhost:9001/api/challenges";
     
-    //(UIButton *)[subview viewWithTag:111].titleLable.Text = @"Clicked" ;
+    self.httpData = [HttpData httpData];
     
-    //[self.view addSubview:subview];
-    
-    //MainScreenUIView* mainUiView = [[[NSBundle mainBundle] loadNibNamed:@"MainScreenView" owner:self options:nil] objectAtIndex:0];
-    
-    //[self.view addSubview:mainUiView];
-    
+    [self loadChallenges];
 }
+
+-(void) loadChallenges {
+    [ self.httpData getFrom: _url
+                    headers: nil
+      withCompletionHandler: ^(NSDictionary *dict, NSError *err) {
+          
+          if(err){
+              NSLog(@"Error!");
+              return;
+          }
+          
+          NSMutableArray *challenges = [NSMutableArray array];
+          
+          for (NSDictionary *challengesDict in [dict objectForKey:@"result"]){
+              [challenges addObject:[Challenge challengeWithDict: challengesDict]];
+          }
+          self.challenges = challenges;
+          
+          //dispatch_async(dispatch_get_main_queue(), ^{
+          //    [self.tableView reloadData];
+          //});
+          NSLog(@"%@", self.challenges);
+      }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*-(void)goToQuiz:(id)sender{
-    //if (self.quizListController == nil) {
-    NSLog(@"goTo Quiz!");
-        
- 
-    
-    
-    //[[QuizListViewController alloc] init];
-        
-        
-        //self.quizListController = quizList;
-        //[quizList ];
-    //}
-    //[self.navigationController pushViewController:self animated:YES];
-    
-}*/
 
 - (IBAction)goToQuiz:(id)sender {
     NSLog(@"goTo Quiz!");
     QuizListTableViewController *quizList = [self.storyboard instantiateViewControllerWithIdentifier:@"quizList"];
     
-    
     //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    
     //appDelegate.window.rootViewController = quizList;
     
     [self.navigationController pushViewController:quizList animated:YES];
@@ -82,18 +84,16 @@ static NSString *viewIdentifier = @"MainScreenView" ;
     NSLog(@"goTo Results!");
     ResultsTableViewController *resultsList = [self.storyboard instantiateViewControllerWithIdentifier:@"resultsList"];
     
-    
     //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    
     //appDelegate.window.rootViewController = quizList;
     
-    [self.navigationController pushViewController:resultsList animated:YES];
+    [self.navigationController pushViewController: resultsList animated: YES];
 }
 
 - (IBAction)goToChallenges:(id)sender {
     NSLog(@"goTo Challenges!");
-    ChallengesTableViewController *challengesViewList = [self.storyboard instantiateViewControllerWithIdentifier:@"challengesViewList"];
+    ChallengesTableViewController *challengesViewList = [self.storyboard instantiateViewControllerWithIdentifier: @"challengesViewList"];
     
-    [self.navigationController pushViewController:challengesViewList animated:YES];
+    [self.navigationController pushViewController: challengesViewList animated: YES];
 }
 @end
