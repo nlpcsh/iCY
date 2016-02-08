@@ -43,6 +43,8 @@
     
     QuizTableViewController *quiz = [self.storyboard instantiateViewControllerWithIdentifier: @"quizView"];
     
+    quiz.quizId = self.challenge.questId;
+    
     //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     //appDelegate.window.rootViewController = quizList;
     

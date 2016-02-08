@@ -38,8 +38,15 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self loadQuiz];
 }
 
+
+-(void) loadQuiz {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    self.quiz = [appDelegate.data loadQuizFromJson: self.quizId];
+}
 
 -(IBAction)quizDone {
     

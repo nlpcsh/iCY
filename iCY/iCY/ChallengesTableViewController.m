@@ -80,23 +80,12 @@
                                       reuseIdentifier: cellIdentifier];
     }
     
-    //NSLog(@" Name: %@, number: %@", cellText, [self.addressBookList[indexPath.row] homeNumber]);
-    
-    //cell.textLabel.text = cellText;
-    
-    // TODO: ...
-    NSString *name = [[self.challenges objectAtIndex:indexPath.row] senderName];
-    //NSString *score =[[self.challenges objectAtIndex:indexPath.row] senderScore];
-    //NSString *time =[[self.challenges objectAtIndex:indexPath.row] senderTime];
-    //NSString *cellText = [ NSString stringWithFormat: @"%@    SCORE: %@ / Time: %@ sec", name, score, time];
 
+    NSString *name = [[self.challenges objectAtIndex:indexPath.row] senderName];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     int quesId = [[[self.challenges objectAtIndex: indexPath.row] questId] intValue] - 1;
     NSString *quizName = [[appDelegate.data.quizNames objectAtIndex: quesId] name];
     
-    //appDelegate.window.rootViewController = quizList;
-    
-    //NSString *cellText = [ NSString stringWithFormat: @"%@    SCORE: %@ / Time: %@ sec", name, score, time];
     NSString *cellText = [ NSString stringWithFormat: @"%@      [ %@ ]", name, quizName];
     cell.textLabel.text = cellText;
     

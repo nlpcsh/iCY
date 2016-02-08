@@ -11,16 +11,24 @@
 @interface Question : NSObject
 
 @property (strong, nonatomic) NSString *body;
-@property  NSInteger *quizId;
-@property  NSInteger *iD;
-@property (strong, nonatomic) NSArray *answers;
+@property (strong, nonatomic) NSString *quizId;
+@property (strong, nonatomic) NSString *iD;
+@property (strong, nonatomic) NSMutableArray *answers;
 
--(instancetype)initWithBody: (NSString*) body
-                       quizId:(NSInteger*) quizId
-                         iD: (NSInteger*) iD;
+-(instancetype)initWithBody: (NSString *) body
+                     quizId: (NSString *) quizId
+                         iD: (NSString *) iD
+                    answers: (NSMutableArray *) answers;
 
-+(Question*) questionWithBody: (NSString*) body
-                       quizId:(NSInteger*) quizId
-                           iD: (NSInteger*) iD;
++(Question*) questionWithBody: (NSString *) body
+                       quizId: (NSString *) quizId
+                           iD: (NSString *) iD
+                      answers: (NSMutableArray *) answers;
+
+-initWithDict: (NSDictionary *) dict;
+
++(Question *) quiestionWithDict: (NSDictionary *) dict;
+
+-dict;
 
 @end

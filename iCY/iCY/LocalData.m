@@ -29,7 +29,7 @@
     [self.contacts addObject:contact];
 }
 
--(void) readQuizHeadersFromJson {
+-(void) loadQuizHeadersFromJson {
     
     NSString * filePath =[[NSBundle mainBundle] pathForResource:@"list" ofType:@"json"];
     
@@ -51,6 +51,50 @@
     }
     
     //NSLog(@"%@",[self.quizNames[0] name]);
+}
+
+-(Quiz *) loadQuizFromJson: (NSString *) quizId {
+    
+    NSString * filePath =[[NSBundle mainBundle] pathForResource: quizId ofType: @"json"];
+    NSError * error;
+    NSString* fileContents =[NSString stringWithContentsOfFile: filePath encoding:NSUTF8StringEncoding error:&error];
+    
+    if(error)
+    {
+        NSLog(@"Error reading file: %@",error.localizedDescription);
+    }
+    
+    NSArray *rawQuiz = (NSArray *)[NSJSONSerialization JSONObjectWithData:[fileContents dataUsingEncoding:NSUTF8StringEncoding] options:0 error:NULL];
+    
+    NSMutableArray *quizBody = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *dictQuiz in rawQuiz) {
+        Quiz *quiz = [[Quiz alloc] initWithDict: dictQuiz];
+        
+        NSMutableArray *questions = [NSMutableArray array];
+        
+        for (NSDictionary *dictQuestion in quiz.questions) {
+            
+            Question *question = [[Question alloc] initWithDict:dictQuestion];
+            NSMutableArray *answers = [NSMutableArray array];
+            
+            for (NSDictionary *dictAnswers in question.answers) {
+                Answer *answer = [[Answer alloc] initWithDict:dictAnswers];
+                [answers addObject:answer];
+            }
+            
+            question.answers = answers;
+            [questions addObject:question];
+        }
+
+        //[quiz.questions removeAllObjects];
+        
+        quiz.questions = questions;
+        
+        [quizBody addObject: quiz];
+    }
+    
+    return quizBody[0];
 }
 
 @end

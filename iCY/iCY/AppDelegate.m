@@ -28,7 +28,7 @@
     
     [self checkIfIdCorrespondsToNameInAddressBook];
     
-    [self.data readQuizHeadersFromJson];
+    [self.data loadQuizHeadersFromJson];
     
     return YES;
 }

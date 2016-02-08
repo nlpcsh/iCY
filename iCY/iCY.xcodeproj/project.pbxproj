@@ -33,6 +33,7 @@
 		F3E65A161C68220E002AD58C /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A151C68220E002AD58C /* list.json */; };
 		F3E65A191C682B39002AD58C /* QuizHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A181C682B39002AD58C /* QuizHeader.m */; };
 		F3E65A1C1C685CB4002AD58C /* ChallengeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A1B1C685CB4002AD58C /* ChallengeInfoViewController.m */; };
+		F3E65A1E1C688882002AD58C /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A1D1C688882002AD58C /* 1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		F3E65A181C682B39002AD58C /* QuizHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizHeader.m; sourceTree = "<group>"; };
 		F3E65A1A1C685CB4002AD58C /* ChallengeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeInfoViewController.h; sourceTree = "<group>"; };
 		F3E65A1B1C685CB4002AD58C /* ChallengeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeInfoViewController.m; sourceTree = "<group>"; };
+		F3E65A1D1C688882002AD58C /* 1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = 1.json; path = iCY/quizzes/1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,7 @@
 		F30646431C6135E600E2A1F6 = {
 			isa = PBXGroup;
 			children = (
-				F3E65A151C68220E002AD58C /* list.json */,
+				F3E65A1F1C68899A002AD58C /* QuizData */,
 				F30646771C6369E900E2A1F6 /* CoreData.framework */,
 				F306464E1C6135E600E2A1F6 /* iCY */,
 				F306464D1C6135E600E2A1F6 /* Products */,
@@ -206,6 +208,15 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		F3E65A1F1C68899A002AD58C /* QuizData */ = {
+			isa = PBXGroup;
+			children = (
+				F3E65A151C68220E002AD58C /* list.json */,
+				F3E65A1D1C688882002AD58C /* 1.json */,
+			);
+			name = QuizData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E65A1E1C688882002AD58C /* 1.json in Resources */,
 				F3E65A161C68220E002AD58C /* list.json in Resources */,
 				F306465F1C6135E600E2A1F6 /* LaunchScreen.storyboard in Resources */,
 				F3E659FC1C65AF1D002AD58C /* QuestionTableViewCell.xib in Resources */,

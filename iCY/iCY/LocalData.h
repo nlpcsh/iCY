@@ -10,6 +10,9 @@
 #import "Challenge.h"
 #import "Contact.h"
 #import "QuizHeader.h"
+#import "Question.h"
+#import "Answer.h"
+#import "Quiz.h"
 
 @interface LocalData : NSObject
 
@@ -20,6 +23,7 @@
 -(void) deleteChallenge: (Challenge *) challenge;
 -(void) addContact: (Contact *) contact;
 
--(void) readQuizHeadersFromJson;
+-(void) loadQuizHeadersFromJson;
+-(Quiz *) loadQuizFromJson: (NSString *) quizId;
 
 @end

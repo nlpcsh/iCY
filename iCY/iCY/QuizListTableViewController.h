@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Quiz.h"
-#import "Question.h"
-#import "Answer.h"
+
+#import "AppDelegate.h"
 
 @interface QuizListTableViewController : UITableViewController
 

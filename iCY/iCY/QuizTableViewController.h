@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Quiz.h"
+#import "Question.h"
+#import "Answer.h"
 #import "QuizDoneViewController.h"
 #import "AnswerTableViewCell.h"
+#import "AppDelegate.h"
 
 @interface QuizTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSString *quizId;
 @property (strong, nonatomic) Quiz *quiz;
 @property (strong, nonatomic) NSMutableArray *questionAndAnswersList;
 @property (strong, nonatomic) NSTimer *stopWatch;
