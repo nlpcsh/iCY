@@ -11,7 +11,7 @@
 #import "ResultsTableViewController.h"
 #import "ChallengesTableViewController.h"
 
-//#import "AppDelegate.h"
+#import "AppDelegate.h"
 
 
 @interface MainScreenViewController ()
@@ -28,6 +28,12 @@ static NSString *viewIdentifier = @"MainScreenView" ;
     self.title = @"Main";
     
     NSLog(@"Main Did Load!");
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+    if (appDelegate.data.challenges.count > 0) {
+        self.countOfChallanges.text = [NSString stringWithFormat:@" You have %lu challanges ", (unsigned long)appDelegate.data.challenges.count];
+    }
     
 }
 

@@ -185,6 +185,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     
     cell.textLabel.text = cellText;
     cell.imageView.image = [UIImage imageNamed:questionImgStr];
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
