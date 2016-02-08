@@ -20,6 +20,8 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     
     [super viewDidLoad];
     
+    self.score = 0;
+    
     [self setStopwatch];
     
     // reset array of question and answers
@@ -60,7 +62,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     quizDoneVC.timeStr = self.timeStr;
     quizDoneVC.timeSeconds = self.timeSeconds;
     
-    self.score = (int)11;
+    //self.score = (int)11;
     
     quizDoneVC.score = self.score;
     
@@ -75,7 +77,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
                                                     userInfo: nil
                                                      repeats: YES];
     
-    [[NSRunLoop mainRunLoop] addTimer: self.stopWatch forMode:NSRunLoopCommonModes];
+    [[NSRunLoop mainRunLoop] addTimer: self.stopWatch forMode: NSRunLoopCommonModes];
     
     self.stopwatchView = (UILabel *)self.navigationItem.titleView;
     
@@ -98,7 +100,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
 -(void)timerTick:(NSTimer *)timer
 {
     self.ticks += 1.0;
-    self.timeSeconds = (NSInteger )self.ticks;
+    self.timeSeconds = self.ticks;
     double seconds = fmod(self.ticks, 60.0);
     double minutes = fmod(trunc(self.ticks / 60.0), 60.0);
     double hours = trunc(self.ticks / 3600.0);
@@ -123,6 +125,8 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     
     int rowsCount = 0;
     
+    self.answersCheck = [NSMutableArray array];
+    
     rowsCount = (int)self.quiz.questions.count;
     
     // set all questions in single array in proper order
@@ -137,7 +141,21 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
         rowsCount += (int)[self.quiz.questions[i] answers].count;
         
     }
-    NSLog(@"Rows for quiz: %i", rowsCount);
+    //NSLog(@"Rows for quiz: %i", rowsCount);
+    
+    for (int i=0; i < self.questionAndAnswersList.count; i++) {
+        if ([self.questionAndAnswersList[i] isKindOfClass: Question.class]) {
+            [self.answersCheck addObject: @"2"];
+        }
+        else {
+            if ([[self.questionAndAnswersList[i] isTrue] isEqual: @"1"]) {
+                [self.answersCheck addObject: @"1"];
+            }
+            else {
+                [self.answersCheck addObject: @"0"];
+            }
+        }
+    }
     
     return rowsCount;
 }
@@ -174,6 +192,31 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
 -(void)viewWillDisappear:(BOOL)animated {
     [self.stopWatch invalidate];
     self.stopWatch = nil;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    self.score = 0;
+}
+
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell* theCell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if ([self.answersCheck[indexPath.row] isEqualToString: @"1"]) {
+        
+        //Then you change the properties (label, text, color etc..) in your case, the background color
+        theCell.contentView.backgroundColor = [UIColor grayColor];
+        self.score += 1;
+        
+        //Deselect the cell so you can see the color change
+        
+    }
+    else if ([self.answersCheck[indexPath.row] isEqualToString: @"0"]) {
+        theCell.contentView.backgroundColor = [UIColor grayColor];
+    }
+    
+    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*

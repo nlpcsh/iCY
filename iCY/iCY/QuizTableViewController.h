@@ -23,7 +23,8 @@
 @property (strong, nonatomic) UILabel *stopwatchView;
 @property double ticks;
 @property (strong, nonatomic) NSString *timeStr;
-@property NSInteger *timeSeconds;
-@property NSInteger *score;
+@property double timeSeconds;
+@property int score;
+@property (strong, nonatomic) NSMutableArray *answersCheck;
 
 @end

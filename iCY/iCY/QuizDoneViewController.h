@@ -18,9 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *diffScoreLable;
 @property (weak, nonatomic) IBOutlet UILabel *diffTimeLable;
 @property (weak, nonatomic) IBOutlet UILabel *howYouDidLable;
-@property NSInteger *timeSeconds;
+@property double timeSeconds;
 @property (strong, nonatomic) NSString *timeStr;
-@property NSInteger *score;
+@property int score;
 
 
 - (IBAction)goChallengeSmone:(id)sender;
