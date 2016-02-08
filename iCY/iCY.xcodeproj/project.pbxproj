@@ -34,6 +34,8 @@
 		F3E65A191C682B39002AD58C /* QuizHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A181C682B39002AD58C /* QuizHeader.m */; };
 		F3E65A1C1C685CB4002AD58C /* ChallengeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A1B1C685CB4002AD58C /* ChallengeInfoViewController.m */; };
 		F3E65A1E1C688882002AD58C /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A1D1C688882002AD58C /* 1.json */; };
+		F3E65A481C68DA41002AD58C /* ScoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A461C68DA41002AD58C /* ScoreModel.xcdatamodeld */; };
+		F3E65A4B1C68E241002AD58C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A4A1C68E241002AD58C /* Score.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,9 @@
 		F3E65A1A1C685CB4002AD58C /* ChallengeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeInfoViewController.h; sourceTree = "<group>"; };
 		F3E65A1B1C685CB4002AD58C /* ChallengeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeInfoViewController.m; sourceTree = "<group>"; };
 		F3E65A1D1C688882002AD58C /* 1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = 1.json; path = iCY/quizzes/1.json; sourceTree = "<group>"; };
+		F3E65A471C68DA41002AD58C /* ScoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoreModel.xcdatamodel; sourceTree = "<group>"; };
+		F3E65A491C68E241002AD58C /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		F3E65A4A1C68E241002AD58C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,7 @@
 		F306464E1C6135E600E2A1F6 /* iCY */ = {
 			isa = PBXGroup;
 			children = (
+				F3E65A461C68DA41002AD58C /* ScoreModel.xcdatamodeld */,
 				F3E65A021C66B039002AD58C /* Data */,
 				F3E659F71C65AECC002AD58C /* Views */,
 				F306467F1C647E0F00E2A1F6 /* Models */,
@@ -204,6 +210,8 @@
 				F3E65A0A1C66F91C002AD58C /* Contact.m */,
 				F3E65A0C1C67DAAB002AD58C /* LocalData.h */,
 				F3E65A0D1C67DAAC002AD58C /* LocalData.m */,
+				F3E65A491C68E241002AD58C /* Score.h */,
+				F3E65A4A1C68E241002AD58C /* Score.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -299,6 +307,7 @@
 				F306467B1C639B2500E2A1F6 /* ChallengesTableViewController.m in Sources */,
 				F3E659ED1C64B540002AD58C /* Quiz.m in Sources */,
 				F30646541C6135E600E2A1F6 /* AppDelegate.m in Sources */,
+				F3E65A481C68DA41002AD58C /* ScoreModel.xcdatamodeld in Sources */,
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
 				F3E65A191C682B39002AD58C /* QuizHeader.m in Sources */,
 				F3E65A001C65BC85002AD58C /* AnswerTableViewCell.m in Sources */,
@@ -308,6 +317,7 @@
 				F3E65A1C1C685CB4002AD58C /* ChallengeInfoViewController.m in Sources */,
 				F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */,
 				F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */,
+				F3E65A4B1C68E241002AD58C /* Score.m in Sources */,
 				F306467E1C63A18000E2A1F6 /* QuizTableViewController.m in Sources */,
 				F3E659F31C64BBCB002AD58C /* Answer.m in Sources */,
 			);
@@ -470,6 +480,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F3E65A461C68DA41002AD58C /* ScoreModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F3E65A471C68DA41002AD58C /* ScoreModel.xcdatamodel */,
+			);
+			currentVersion = F3E65A471C68DA41002AD58C /* ScoreModel.xcdatamodel */;
+			name = ScoreModel.xcdatamodeld;
+			path = ../ScoreModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F30646441C6135E600E2A1F6 /* Project object */;
 }

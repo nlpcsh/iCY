@@ -65,6 +65,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     //self.score = (int)11;
     
     quizDoneVC.score = self.score;
+    quizDoneVC.quizId = self.quizId;
     
     
     [self.navigationController pushViewController: quizDoneVC animated: YES];

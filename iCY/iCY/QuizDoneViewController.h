@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 #import "AppDelegate.h"
 #import "QuizListTableViewController.h"
 #import "ResultsTableViewController.h"
 
 @interface QuizDoneViewController : UIViewController
+
+@property (strong, nonatomic) NSString *quizId;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLable;
 @property (weak, nonatomic) IBOutlet UILabel *timeLable;

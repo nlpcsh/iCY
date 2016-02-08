@@ -31,6 +31,9 @@
     AppDelegate* delegate = [UIApplication sharedApplication].delegate;
     self.challenges = [delegate.data challenges];
     
+    //[self.tableView insertRowsAtIndexPaths: @[indexPath]
+    //                      withRowAnimation: UITableViewRowAnimationAutomatic];
+    [self.tableView reloadData];
 }
 
 
@@ -88,6 +91,9 @@
     
     NSString *cellText = [ NSString stringWithFormat: @"%@      [ %@ ]", name, quizName];
     cell.textLabel.text = cellText;
+    
+    
+
     
     //cell.imageView.image =
     

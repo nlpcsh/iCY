@@ -10,10 +10,10 @@
 
 @interface Contact : NSObject
 
-@property (nonatomic, copy) NSString *firstName;
-@property (nonatomic, copy) NSString *lastName;
-@property (nonatomic, copy) NSString *mobileNumber;
-@property (nonatomic, copy) NSString *homeNumber;
+@property (nonatomic, strong) NSString *firstName;
+@property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSString *mobileNumber;
+@property (nonatomic, strong) NSString *homeNumber;
 
 
 + (id)createContactWithFirst:(NSString *)firstName
