@@ -22,11 +22,13 @@
     
     self.httpData = [HttpData httpData];
     
-    [self loadChallenges];
+    [self getChallenges];
     
     [self checkIfAppHasPermissionsToReadAddressBook];
     
     [self checkIfIdCorrespondsToNameInAddressBook];
+    
+    [self.data readQuizHeadersFromJson];
     
     return YES;
 }
@@ -53,7 +55,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
--(void) loadChallenges {
+-(void) getChallenges {
     
     NSString *url = @"http://localhost:9001/api/challenges";
     
@@ -85,6 +87,7 @@
 
 -(void)checkIfAppHasPermissionsToReadAddressBook {
     // Code to check if there are permissions to use addres book
+    // https://www.sinch.com/tutorials/ios-address-book-tutorial/
     if (ABAddressBookGetAuthorizationStatus() ==
         kABAuthorizationStatusDenied ||
         ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusRestricted) {
@@ -186,7 +189,7 @@
                                                                  Last: lName
                                                          MobileNumber: mNumber
                                                            HomeNumber: hNumber];
-                //// PUT contacts in table:
+                //// Put contacts in contacts list:
                 
                 if (!self.data.contacts) {
                     self.data.contacts = [[NSMutableArray alloc] init];
@@ -207,15 +210,10 @@
     }
 }
 
-
 -(void) checkIfIdCorrespondsToNameInAddressBook {
     
-    //self.challengerNames = [NSMutableDictionary dictionary];
-    
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    //[delegate.data addPhone:phone];
-    
-    
+
     for (int i = 0; i < self.data.contacts.count; i++) {
         
         NSString *phone = [self.data.contacts[i] homeNumber];
@@ -227,11 +225,8 @@
             if (senderId == phone) {
                 [delegate.data.challenges[j] setSenderName:[self.data.contacts[i] firstName]];
             }
-            
         }
     }
-    
-    //self.challenges = delegate.data.challenges;
 }
 
 

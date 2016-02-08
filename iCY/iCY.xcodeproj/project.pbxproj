@@ -30,6 +30,8 @@
 		F3E65A081C66BE0A002AD58C /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A071C66BE0A002AD58C /* Challenge.m */; };
 		F3E65A0B1C66F91C002AD58C /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A0A1C66F91C002AD58C /* Contact.m */; };
 		F3E65A0E1C67DAAC002AD58C /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A0D1C67DAAC002AD58C /* LocalData.m */; };
+		F3E65A161C68220E002AD58C /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A151C68220E002AD58C /* list.json */; };
+		F3E65A191C682B39002AD58C /* QuizHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A181C682B39002AD58C /* QuizHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,9 @@
 		F3E65A0A1C66F91C002AD58C /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		F3E65A0C1C67DAAB002AD58C /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		F3E65A0D1C67DAAC002AD58C /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
+		F3E65A151C68220E002AD58C /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = list.json; path = iCY/quizzes/list.json; sourceTree = "<group>"; };
+		F3E65A171C682B39002AD58C /* QuizHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizHeader.h; sourceTree = "<group>"; };
+		F3E65A181C682B39002AD58C /* QuizHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,7 @@
 		F30646431C6135E600E2A1F6 = {
 			isa = PBXGroup;
 			children = (
+				F3E65A151C68220E002AD58C /* list.json */,
 				F30646771C6369E900E2A1F6 /* CoreData.framework */,
 				F306464E1C6135E600E2A1F6 /* iCY */,
 				F306464D1C6135E600E2A1F6 /* Products */,
@@ -163,6 +169,8 @@
 				F3E659F21C64BBCB002AD58C /* Answer.m */,
 				F3E65A061C66BE0A002AD58C /* Challenge.h */,
 				F3E65A071C66BE0A002AD58C /* Challenge.m */,
+				F3E65A171C682B39002AD58C /* QuizHeader.h */,
+				F3E65A181C682B39002AD58C /* QuizHeader.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E65A161C68220E002AD58C /* list.json in Resources */,
 				F306465F1C6135E600E2A1F6 /* LaunchScreen.storyboard in Resources */,
 				F3E659FC1C65AF1D002AD58C /* QuestionTableViewCell.xib in Resources */,
 				F3E65A011C65BC85002AD58C /* AnswerTableViewCell.xib in Resources */,
@@ -274,6 +283,7 @@
 				F3E659ED1C64B540002AD58C /* Quiz.m in Sources */,
 				F30646541C6135E600E2A1F6 /* AppDelegate.m in Sources */,
 				F30646511C6135E600E2A1F6 /* main.m in Sources */,
+				F3E65A191C682B39002AD58C /* QuizHeader.m in Sources */,
 				F3E65A001C65BC85002AD58C /* AnswerTableViewCell.m in Sources */,
 				F3E65A081C66BE0A002AD58C /* Challenge.m in Sources */,
 				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,
