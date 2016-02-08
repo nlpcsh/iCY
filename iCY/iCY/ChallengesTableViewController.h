@@ -11,6 +11,7 @@
 //#import "Contact.h"
 #import "Challenge.h"
 #import "AppDelegate.h"
+#import "ChallengeInfoViewController.h"
 
 @interface ChallengesTableViewController : UITableViewController
 

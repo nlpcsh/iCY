@@ -32,6 +32,7 @@
 		F3E65A0E1C67DAAC002AD58C /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A0D1C67DAAC002AD58C /* LocalData.m */; };
 		F3E65A161C68220E002AD58C /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A151C68220E002AD58C /* list.json */; };
 		F3E65A191C682B39002AD58C /* QuizHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A181C682B39002AD58C /* QuizHeader.m */; };
+		F3E65A1C1C685CB4002AD58C /* ChallengeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A1B1C685CB4002AD58C /* ChallengeInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		F3E65A151C68220E002AD58C /* list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = list.json; path = iCY/quizzes/list.json; sourceTree = "<group>"; };
 		F3E65A171C682B39002AD58C /* QuizHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizHeader.h; sourceTree = "<group>"; };
 		F3E65A181C682B39002AD58C /* QuizHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizHeader.m; sourceTree = "<group>"; };
+		F3E65A1A1C685CB4002AD58C /* ChallengeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeInfoViewController.h; sourceTree = "<group>"; };
+		F3E65A1B1C685CB4002AD58C /* ChallengeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,8 @@
 				F306467D1C63A18000E2A1F6 /* QuizTableViewController.m */,
 				F3E659F41C6560AB002AD58C /* QuizDoneViewController.h */,
 				F3E659F51C6560AB002AD58C /* QuizDoneViewController.m */,
+				F3E65A1A1C685CB4002AD58C /* ChallengeInfoViewController.h */,
+				F3E65A1B1C685CB4002AD58C /* ChallengeInfoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				F3E65A081C66BE0A002AD58C /* Challenge.m in Sources */,
 				F30646711C6254D900E2A1F6 /* QuizListTableViewController.m in Sources */,
 				F3E65A051C66B066002AD58C /* HttpData.m in Sources */,
+				F3E65A1C1C685CB4002AD58C /* ChallengeInfoViewController.m in Sources */,
 				F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */,
 				F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */,
 				F306467E1C63A18000E2A1F6 /* QuizTableViewController.m in Sources */,

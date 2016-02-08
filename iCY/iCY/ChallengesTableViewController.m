@@ -86,11 +86,18 @@
     
     // TODO: ...
     NSString *name = [[self.challenges objectAtIndex:indexPath.row] senderName];
-    NSString *score =[[self.challenges objectAtIndex:indexPath.row] senderScore];
-    NSString *time =[[self.challenges objectAtIndex:indexPath.row] senderTime];
+    //NSString *score =[[self.challenges objectAtIndex:indexPath.row] senderScore];
+    //NSString *time =[[self.challenges objectAtIndex:indexPath.row] senderTime];
     //NSString *cellText = [ NSString stringWithFormat: @"%@    SCORE: %@ / Time: %@ sec", name, score, time];
 
-    NSString *cellText = [ NSString stringWithFormat: @"%@    SCORE: %@ / Time: %@ sec", name, score, time];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    int quesId = [[[self.challenges objectAtIndex: indexPath.row] questId] intValue] - 1;
+    NSString *quizName = [[appDelegate.data.quizNames objectAtIndex: quesId] name];
+    
+    //appDelegate.window.rootViewController = quizList;
+    
+    //NSString *cellText = [ NSString stringWithFormat: @"%@    SCORE: %@ / Time: %@ sec", name, score, time];
+    NSString *cellText = [ NSString stringWithFormat: @"%@      [ %@ ]", name, quizName];
     cell.textLabel.text = cellText;
     
     //cell.imageView.image =
@@ -98,12 +105,21 @@
     return cell;
 }
 
-/*
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@" Selected row is %ld", indexPath.row);
     
+    Challenge *challenge = [self.challenges objectAtIndex:indexPath.row];
+    NSString *storyBoardId = @"challengeInfoView";
+    
+    ChallengeInfoViewController *challengeVC =
+    [self.storyboard instantiateViewControllerWithIdentifier: storyBoardId];
+    challengeVC.challenge = challenge;
+    
+    // AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    // appDelegate.window.rootViewController = detailsVC;
+    [self.navigationController pushViewController: challengeVC
+                                         animated: YES];
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
