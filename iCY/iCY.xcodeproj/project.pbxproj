@@ -36,6 +36,11 @@
 		F3E65A1E1C688882002AD58C /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A1D1C688882002AD58C /* 1.json */; };
 		F3E65A481C68DA41002AD58C /* ScoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A461C68DA41002AD58C /* ScoreModel.xcdatamodeld */; };
 		F3E65A4B1C68E241002AD58C /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A4A1C68E241002AD58C /* Score.m */; };
+		F3E65A4E1C68FB7C002AD58C /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E65A4D1C68FB7C002AD58C /* CoreDataHelper.m */; };
+		F3E65A531C690A35002AD58C /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A4F1C690A35002AD58C /* 2.json */; };
+		F3E65A541C690A35002AD58C /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A501C690A35002AD58C /* 3.json */; };
+		F3E65A551C690A35002AD58C /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A511C690A35002AD58C /* 4.json */; };
+		F3E65A561C690A35002AD58C /* 5.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E65A521C690A35002AD58C /* 5.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +95,12 @@
 		F3E65A471C68DA41002AD58C /* ScoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoreModel.xcdatamodel; sourceTree = "<group>"; };
 		F3E65A491C68E241002AD58C /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		F3E65A4A1C68E241002AD58C /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		F3E65A4C1C68FB7C002AD58C /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		F3E65A4D1C68FB7C002AD58C /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		F3E65A4F1C690A35002AD58C /* 2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = 2.json; path = iCY/quizzes/2.json; sourceTree = "<group>"; };
+		F3E65A501C690A35002AD58C /* 3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = 3.json; path = iCY/quizzes/3.json; sourceTree = "<group>"; };
+		F3E65A511C690A35002AD58C /* 4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = 4.json; path = iCY/quizzes/4.json; sourceTree = "<group>"; };
+		F3E65A521C690A35002AD58C /* 5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = 5.json; path = iCY/quizzes/5.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +223,8 @@
 				F3E65A0D1C67DAAC002AD58C /* LocalData.m */,
 				F3E65A491C68E241002AD58C /* Score.h */,
 				F3E65A4A1C68E241002AD58C /* Score.m */,
+				F3E65A4C1C68FB7C002AD58C /* CoreDataHelper.h */,
+				F3E65A4D1C68FB7C002AD58C /* CoreDataHelper.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -219,6 +232,10 @@
 		F3E65A1F1C68899A002AD58C /* QuizData */ = {
 			isa = PBXGroup;
 			children = (
+				F3E65A4F1C690A35002AD58C /* 2.json */,
+				F3E65A501C690A35002AD58C /* 3.json */,
+				F3E65A511C690A35002AD58C /* 4.json */,
+				F3E65A521C690A35002AD58C /* 5.json */,
 				F3E65A151C68220E002AD58C /* list.json */,
 				F3E65A1D1C688882002AD58C /* 1.json */,
 			);
@@ -282,6 +299,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E65A531C690A35002AD58C /* 2.json in Resources */,
+				F3E65A541C690A35002AD58C /* 3.json in Resources */,
+				F3E65A551C690A35002AD58C /* 4.json in Resources */,
+				F3E65A561C690A35002AD58C /* 5.json in Resources */,
 				F3E65A1E1C688882002AD58C /* 1.json in Resources */,
 				F3E65A161C68220E002AD58C /* list.json in Resources */,
 				F306465F1C6135E600E2A1F6 /* LaunchScreen.storyboard in Resources */,
@@ -317,6 +338,7 @@
 				F3E65A1C1C685CB4002AD58C /* ChallengeInfoViewController.m in Sources */,
 				F3E659F61C6560AB002AD58C /* QuizDoneViewController.m in Sources */,
 				F30646741C62965B00E2A1F6 /* ResultsTableViewController.m in Sources */,
+				F3E65A4E1C68FB7C002AD58C /* CoreDataHelper.m in Sources */,
 				F3E65A4B1C68E241002AD58C /* Score.m in Sources */,
 				F306467E1C63A18000E2A1F6 /* QuizTableViewController.m in Sources */,
 				F3E659F31C64BBCB002AD58C /* Answer.m in Sources */,

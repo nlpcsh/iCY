@@ -19,13 +19,17 @@
     // Do any additional setup after loading the view.
     NSLog(@"Results did load");
     
-    self.title = @"Completed Quizzes";
+    self.title = @"My Results";
     [self readResults];
     
 }
 
 -(void) readResults {
-    self.results = [NSArray arrayWithObjects:@"First result", @"Second result", @"Third result", nil ];
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    self.results = appDelegate.data.results;
+    
+    //[NSArray arrayWithObjects:@"First result", @"Second result", @"Third result", nil ];
 }
 
 -(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -36,7 +40,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = [self.results objectAtIndex:indexPath.row];
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+    int quizId = [[[self.results objectAtIndex:indexPath.row] quizId] integerValue];
+    NSString *quizName = appDelegate.data.quizNames[quizId];
+
+    //id score = [appDelegate.data.results objectAtIndex:indexPath.row].score;
+    
+    NSString *displaiedText = [self.results objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = displaiedText;
     //cell.imageView.image =
     
     return cell;

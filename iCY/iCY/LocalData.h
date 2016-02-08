@@ -19,6 +19,7 @@
 @property NSMutableArray *challenges;
 @property NSMutableArray *contacts;
 @property NSMutableArray *quizNames;
+@property NSMutableArray *results;
 
 -(void) deleteChallenge: (Challenge *) challenge;
 -(void) addContact: (Contact *) contact;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AddressBook/AddressBook.h>
-#import <CoreData/CoreData.h>
+//#import <CoreData/CoreData.h>
 #import "HttpData.h"
 //#import "Challenge.h"
 #import "LocalData.h"
@@ -20,13 +20,6 @@
 @property (strong, nonatomic) LocalData *data;
 @property (strong, nonatomic) HttpData *httpData;
 
-
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
 
 @end
 

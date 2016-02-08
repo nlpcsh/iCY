@@ -11,11 +11,11 @@
 @interface Score : NSObject
 
 @property (strong, nonatomic) NSString *iD;
-@property (strong, nonatomic) NSString *score;
-@property (strong, nonatomic) NSString *time;
+@property NSNumber *score;
+@property NSNumber *time;
 
 -(instancetype)initWithId: (NSString *) iD
-                    score: (NSString *) score
-                     time: (NSString *) time;
+                    score: (NSNumber * ) score
+                     time: (NSNumber * ) time;
 
 @end

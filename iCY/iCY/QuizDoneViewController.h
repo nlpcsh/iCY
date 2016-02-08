@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 #import "QuizListTableViewController.h"
 #import "ResultsTableViewController.h"
+#import "Score.h"
+#import "CoreDataHelper.h"
 
 @interface QuizDoneViewController : UIViewController
 
@@ -21,9 +23,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *diffScoreLable;
 @property (weak, nonatomic) IBOutlet UILabel *diffTimeLable;
 @property (weak, nonatomic) IBOutlet UILabel *howYouDidLable;
-@property double timeSeconds;
+@property NSNumber *timeSeconds;
 @property (strong, nonatomic) NSString *timeStr;
-@property int score;
+@property NSNumber *score;
 
 
 - (IBAction)goChallengeSmone:(id)sender;

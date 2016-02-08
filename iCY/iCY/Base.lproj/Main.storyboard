@@ -74,7 +74,7 @@
                                     <constraint firstAttribute="width" constant="264" id="ZPI-4P-nhU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.81133426050000002" green="0.43028841410000002" blue="0.00032838995379999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

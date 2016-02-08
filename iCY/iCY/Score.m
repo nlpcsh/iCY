@@ -11,8 +11,8 @@
 @implementation Score
 
 -(instancetype)initWithId:(NSString *)iD
-                    score:(NSString *)score
-                     time:(NSString *)time {
+                    score:(NSNumber * )score
+                     time:(NSNumber * )time {
     
     if(self = [super init]) {
         self.iD = iD;

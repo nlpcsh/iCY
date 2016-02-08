@@ -10,6 +10,8 @@
 
 @interface QuizDoneViewController ()
 
+@property(nonatomic, strong) CoreDataHelper* cdHelper;
+
 @end
 
 @implementation QuizDoneViewController
@@ -31,7 +33,25 @@
 }
 
 -(void) saveResultsToDb {
-    //NSManagedObjectModel saveScore = NSEnt
+    //
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate.data.results addObject:[[Score alloc] initWithId: self.quizId
+                                                            score: self.score
+                                                             time: self.timeSeconds]];
+    
+    _cdHelper = [[CoreDataHelper alloc] init];
+    [_cdHelper setupCoreData];
+    
+    //Score *currentScore = [NSEntityDescription insertNewObjectForEntityForName: @"Score"
+    //                                                    inManagedObjectContext: _cdHelper.context];
+    //
+    //currentScore.iD = self.quizId;
+    //currentScore.score = self.score;
+    //currentScore.time = self.timeSeconds;
+    //[_cdHelper.context insertObject: currentScore];
+    //
+    //[self.cdHelper saveContext];
+    
 }
 
 -(void) updateVisualResult {
@@ -41,7 +61,8 @@
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
     long qId = [self.quizId integerValue];
-    long scoreDiff = [[appDelegate.data.challenges[qId] senderScore] integerValue] - self.score;
+    long smt = [[appDelegate.data.challenges[qId] senderScore] integerValue];
+    long scoreDiff = smt - [self.score integerValue];
     
     if (scoreDiff < 0) {
         self.diffScoreLable.textColor = [UIColor blueColor];
@@ -52,9 +73,9 @@
     
     self.diffScoreLable.text = [NSString stringWithFormat:@"%li", scoreDiff];
     
-    long timeDiff = self.timeSeconds - [[appDelegate.data.challenges[qId] senderTime] integerValue];
+    double timeDiff = [self.timeSeconds doubleValue] - [[appDelegate.data.challenges[qId] senderTime] integerValue];
     
-    self.diffTimeLable.text = [NSString stringWithFormat:@"%li", timeDiff];
+    self.diffTimeLable.text = [NSString stringWithFormat:@"%.1f", timeDiff];
     if (timeDiff < 0) {
         self.diffTimeLable.textColor = [UIColor blueColor];
     }

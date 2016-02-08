@@ -16,6 +16,7 @@
         self.challenges = [NSMutableArray array];
         self.contacts = [NSMutableArray array];
         self.quizNames = [NSMutableArray array];
+        self.results = [NSMutableArray array];
     }
     return self;
 }

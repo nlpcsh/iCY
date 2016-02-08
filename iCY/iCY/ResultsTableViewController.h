@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface ResultsTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *results;
+@property (strong, nonatomic) NSMutableArray *results;
 
 @end

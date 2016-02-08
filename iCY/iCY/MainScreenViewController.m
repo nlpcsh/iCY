@@ -33,6 +33,7 @@ static NSString *viewIdentifier = @"MainScreenView" ;
     
     if (appDelegate.data.challenges.count > 0) {
         self.countOfChallanges.text = [NSString stringWithFormat:@" You have %lu challanges ", (unsigned long)appDelegate.data.challenges.count];
+        //self.countOfChallanges.textColor = [UIColor orangeColor];
     }
     
 }

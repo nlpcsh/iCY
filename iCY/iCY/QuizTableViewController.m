@@ -20,7 +20,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     
     [super viewDidLoad];
     
-    self.score = 0;
+    self.scoreCounter = 0;
     
     [self setStopwatch];
     
@@ -62,8 +62,6 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
     quizDoneVC.timeStr = self.timeStr;
     quizDoneVC.timeSeconds = self.timeSeconds;
     
-    //self.score = (int)11;
-    
     quizDoneVC.score = self.score;
     quizDoneVC.quizId = self.quizId;
     
@@ -101,7 +99,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
 -(void)timerTick:(NSTimer *)timer
 {
     self.ticks += 1.0;
-    self.timeSeconds = self.ticks;
+    //self.timeSeconds = (NSNumber )self.ticks;
     double seconds = fmod(self.ticks, 60.0);
     double minutes = fmod(trunc(self.ticks / 60.0), 60.0);
     double hours = trunc(self.ticks / 3600.0);
@@ -194,10 +192,12 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
 -(void)viewWillDisappear:(BOOL)animated {
     [self.stopWatch invalidate];
     self.stopWatch = nil;
+    self.timeSeconds = [NSNumber numberWithDouble: self.ticks] ;
+    self.score = [NSNumber numberWithInt:self.scoreCounter];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    self.score = 0;
+    self.scoreCounter = 0;
 }
 
 
@@ -209,7 +209,7 @@ static NSString* cellQuestIdentifier = @"QuestionTableViewCell";
         
         //Then you change the properties (label, text, color etc..) in your case, the background color
         theCell.contentView.backgroundColor = [UIColor grayColor];
-        self.score += 1;
+        self.scoreCounter += 1;
         
         //Deselect the cell so you can see the color change
         
